@@ -1,0 +1,68 @@
+.firstSection-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: whitesmoke;
+}
+
+.firstSection-main-one {
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstSection-main-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstSection-main-two .cardsOne,
+.firstSection-main-two .cardsTwo {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstSection-main-two .cardsOne .cards,
+.firstSection-main-two .cardsTwo .cards {
+  width: 320px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px;
+  /* box-shadow: 2px 2px 5px 2px royalblue */
+  /* box-shadow: 5px 5px 8px rgba(100, 100, 100, 0.5); */
+  box-shadow: 0 0 6px -3px;
+  transition: transform 0.2s;
+}
+.firstSection-main-two .cardsOne .cards:hover,
+.firstSection-main-two .cardsTwo .cards:hover{
+  transform: scale(1.01);
+} 
+.firstSection-main-one-first div{
+  display: flex;
+  justify-content: space-between;
+}
+.firstSection-main-one-second > img{
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+  margin-bottom: -50px;
+  margin-right: 50px;
+}
+.firstSection-main-one-second h2{
+  margin-left: 50px;
+}
+.words {
+  padding: 10px;
+  color: #4060bf;
+}
