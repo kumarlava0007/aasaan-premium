@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/aasaan-premium/static/css/main.0f0173de.chunk.css",
+    "main.js": "/aasaan-premium/static/js/main.986d715d.chunk.js",
+    "main.js.map": "/aasaan-premium/static/js/main.986d715d.chunk.js.map",
+    "runtime-main.js": "/aasaan-premium/static/js/runtime-main.e3c323de.js",
+    "runtime-main.js.map": "/aasaan-premium/static/js/runtime-main.e3c323de.js.map",
+    "static/js/2.dea6db24.chunk.js": "/aasaan-premium/static/js/2.dea6db24.chunk.js",
+    "static/js/2.dea6db24.chunk.js.map": "/aasaan-premium/static/js/2.dea6db24.chunk.js.map",
+    "static/js/3.cfc1b636.chunk.js": "/aasaan-premium/static/js/3.cfc1b636.chunk.js",
+    "static/js/3.cfc1b636.chunk.js.map": "/aasaan-premium/static/js/3.cfc1b636.chunk.js.map",
+    "index.html": "/aasaan-premium/index.html",
+    "static/css/main.0f0173de.chunk.css.map": "/aasaan-premium/static/css/main.0f0173de.chunk.css.map",
+    "static/js/2.dea6db24.chunk.js.LICENSE.txt": "/aasaan-premium/static/js/2.dea6db24.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3c323de.js",
+    "static/js/2.dea6db24.chunk.js",
+    "static/css/main.0f0173de.chunk.css",
+    "static/js/main.986d715d.chunk.js"
+  ]
+}
