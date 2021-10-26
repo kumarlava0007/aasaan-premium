@@ -20,31 +20,31 @@ export default function FirstSectionComponent() {
                 </div>
             </div>
             <div className="firstSection-main-two">
-                <div className="cardsOne">
-                    <div className="cards">
-                        <h2 className="words">
+                <div className="firstSection-cardsOne">
+                    <div className="firstSection-cards">
+                        <h2 className="firstSection-words">
                         Business Insurance
                         </h2>
                     </div>
-                    <div className="cards">
-                        <h2 className="words">
+                    <div className="firstSection-cards">
+                        <h2 className="firstSection-words">
                         Individual Insurance
                         </h2>
                     </div>
-                    <div className="cards">
-                        <h2 className="words">
+                    <div className="firstSection-cards">
+                        <h2 className="firstSection-words">
                         Property Insurance
                         </h2>
                     </div>
                 </div>
-                <div className="cardsTwo">
-                    <div className="cards">
-                            <h2 className="words">
+                <div className="firstSection-cardsTwo">
+                    <div className="firstSection-cards">
+                            <h2 className="firstSection-words">
                             Auto Insurance
                             </h2>
                         </div>
-                        <div className="cards">
-                            <h2 className="words">
+                        <div className="firstSection-cards">
+                            <h2 className="firstSection-words">
                             Life Insurance
                             </h2>
                         </div>

@@ -7,23 +7,23 @@ export default function NavComponent() {
     return (
         <div>
             <div className="containerOne">
-                <div className="box">
-                    <div className="first-box">
+                <div className="boxOne">
+                    <div className="first-boxOne">
                         <Link to="/"><img src={logo} alt="logo" className="nav-logo"/></Link>
                         <div className="navContent">
-                            <Link to="/insurance" class="hover-me linksOne"><h4>Insurance</h4></Link>
-                            <Link to="/getAQuote" class="hover-me linksOne"><h4>Get a Quote</h4></Link>
-                            <Link to="/payabill" class="hover-me linksOne"><h4>Pay a Bill</h4></Link>
-                            <Link to="/claims" class="hover-me linksOne"><h4>Claims</h4></Link>
-                            <Link to="/findAnAgent" class="hover-me linksOne"><h4>Find an Agent</h4></Link>
-                            <Link to="/about" class="hover-me linksOne"><h4>About</h4></Link>
+                            <Link to="/insurance" class="linksOne"><h6>Insurance</h6></Link>
+                            <Link to="/getAQuote" class="linksOne"><h6>Get a Quote</h6></Link>
+                            <Link to="/payabill" class="linksOne"><h6>Pay a Bill</h6></Link>
+                            <Link to="/claims" class="linksOne"><h6>Claims</h6></Link>
+                            <Link to="/findAnAgent" class="linksOne"><h6>Find an Agent</h6></Link>
+                            <Link to="/about" class="linksOne"><h6>About</h6></Link>
                         </div>
                     </div>
-                    <div class="second-box">
+                    <div class="second-boxOne">
                         <Link to="./signIn" className="linksTwo"><strong>Sign Up</strong></Link>
                     </div>
                 </div>
-                <hr class="line"/>
+                <hr className="line"/>
             </div>
         </div>
     )
