@@ -12,7 +12,7 @@ function App() {
       <Router>
         <NavComponent />
         <FirstSectionComponent />
-        < SecondSectionComponent />
+        <SecondSectionComponent />
       </Router>
     
   );
