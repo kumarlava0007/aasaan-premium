@@ -5,26 +5,25 @@ import logo from '../images/AasaanPremiumLogo.png';
 
 export default function NavComponent() {
     return (
-        <div>
+        <>
             <div className="containerOne">
-                <div className="box">
-                    <div className="first-box">
+                <div className="boxOne">
+                    <div className="first-boxOne">
                         <Link to="/"><img src={logo} alt="logo" className="nav-logo"/></Link>
                         <div className="navContent">
-                            <Link to="/insurance" class="hover-me linksOne"><h4>Insurance</h4></Link>
-                            <Link to="/getAQuote" class="hover-me linksOne"><h4>Get a Quote</h4></Link>
-                            <Link to="/payabill" class="hover-me linksOne"><h4>Pay a Bill</h4></Link>
-                            <Link to="/claims" class="hover-me linksOne"><h4>Claims</h4></Link>
-                            <Link to="/findAnAgent" class="hover-me linksOne"><h4>Find an Agent</h4></Link>
-                            <Link to="/about" class="hover-me linksOne"><h4>About</h4></Link>
+                            <Link to="/insurance" className="linksOne"><h6>Insurance</h6></Link>
+                            <Link to="/getAQuote" className="linksOne"><h6>Get a Quote</h6></Link>
+                            <Link to="/payabill" className="linksOne"><h6>Pay a Bill</h6></Link>
+                            <Link to="/claims" className="linksOne"><h6>Claims</h6></Link>
+                            <Link to="/findAnAgent" className="linksOne"><h6>Find an Agent</h6></Link>
+                            <Link to="/about" className="linksOne"><h6>About</h6></Link>
                         </div>
                     </div>
-                    <div class="second-box">
+                    <div class="second-boxOne">
                         <Link to="./signIn" className="linksTwo"><strong>Sign Up</strong></Link>
                     </div>
                 </div>
-                <hr class="line"/>
             </div>
-        </div>
+        </>
     )
 }
