@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/nav.css';
 import logo from '../images/AasaanPremiumLogo.png';
-
+import LoginPage from './userPage/LoginPage';
 export default function NavComponent() {
     return (
         <>
@@ -20,7 +20,7 @@ export default function NavComponent() {
                         </div>
                     </div>
                     <div class="second-boxOne">
-                        <Link to="./signIn" className="linksTwo"><strong>Sign Up</strong></Link>
+                        <Link to="./signIn" className="linksTwo"><strong>LogIn/SignUp</strong></Link>
                     </div>
                 </div>
             </div>
