@@ -13,7 +13,7 @@ function App() {
       <Router>
         <NavComponent />
         <Switch>
-          <Route exact path="/aasaan-premium" component={HomePage}/>
+          <Route exact path="/" component={HomePage}/>
           <Route path="/login" component={LoginPage}/>
           <Switch>
             <Route path="/signup" component={SignUp}/>
