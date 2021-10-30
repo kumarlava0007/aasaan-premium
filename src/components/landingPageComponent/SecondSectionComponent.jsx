@@ -11,7 +11,7 @@ export default function SecondSectionComponent() {
             <div class="agile-works py-5" id="work">
                 <div class="container py-lg-5">
                     <div class="title-section pb-4">
-                        <h3 class="main-title-agile">how it works?</h3>
+                        <h1 className="side-heading headingTwo"><strong>How it works?</strong></h1>
                         <span class="title-line">
                         </span>
                     </div>

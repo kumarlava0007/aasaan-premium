@@ -6,6 +6,7 @@ import HomePage from "./components/landingPageComponent/HomePage";
 import LoginPage from "./components/userPage/LoginPage"
 import SignUp from "./components/userPage/SignUp";
 import ForgotPass from "./components/userPage/ForgotPass";
+import Footer from "./components/Footer";
 function App() {
   document.title = "Aasaan Premium";
   document.icon = {icon};
@@ -20,7 +21,7 @@ function App() {
             <Route path="/forgotpassword" component={ForgotPass}/>
           </Switch>
         </Switch>
-
+        <Footer />
       </Router>
     
   );
