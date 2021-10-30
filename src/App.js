@@ -1,18 +1,26 @@
 import "./App.css";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import NavComponent from "./components/NavComponent";
-import FirstSectionComponent from "./components/landingPageComponent/FirstSectionComponent";
 import icon from "./images/AasaanPremiumLogo.png";
-import SecondSectionComponent from "./components/landingPageComponent/SecondSectionComponent";
-
+import HomePage from "./components/landingPageComponent/HomePage";
+import LoginPage from "./components/userPage/LoginPage"
+import SignUp from "./components/userPage/SignUp";
+import ForgotPass from "./components/userPage/ForgotPass";
 function App() {
   document.title = "Aasaan Premium";
   document.icon = {icon};
   return (
       <Router>
         <NavComponent />
-        <FirstSectionComponent />
-        <SecondSectionComponent />
+        <Switch>
+          <Route exact path="/aasaan-premium" component={HomePage}/>
+          <Route path="/login" component={LoginPage}/>
+          <Switch>
+            <Route path="/signup" component={SignUp}/>
+            <Route path="/forgotpassword" component={ForgotPass}/>
+          </Switch>
+        </Switch>
+
       </Router>
     
   );

@@ -2,14 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/nav.css';
 import logo from '../images/AasaanPremiumLogo.png';
-import LoginPage from './userPage/LoginPage';
 export default function NavComponent() {
     return (
         <>
             <div className="containerOne">
                 <div className="boxOne">
                     <div className="first-boxOne">
-                        <Link to="/"><img src={logo} alt="logo" className="nav-logo"/></Link>
+                        <Link to="/aasaan-premium"><img src={logo} alt="logo" className="nav-logo"/></Link>
                         <div className="navContent">
                             <Link to="/insurance" className="linksOne"><h6>Insurance</h6></Link>
                             <Link to="/getAQuote" className="linksOne"><h6>Get a Quote</h6></Link>
@@ -20,7 +19,7 @@ export default function NavComponent() {
                         </div>
                     </div>
                     <div class="second-boxOne">
-                        <Link to="./signIn" className="linksTwo"><strong>LogIn/SignUp</strong></Link>
+                        <Link to="/login" className="linksTwo"><strong>LogIn / SignUp</strong></Link>
                     </div>
                 </div>
             </div>
