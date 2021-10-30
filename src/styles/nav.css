@@ -62,16 +62,17 @@
 }
 .linksTwo {
     text-decoration: none;
-    color: #4060bf;
+    background-color: #4060bf;
+    color: white;
     font-size: 15px;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #4060bf;
     border-radius: 20px;
     transition: transform 0.2s;
 }
 .linksTwo:hover{
-    color: #4060bf;
-    text-decoration: underline;
+    color: white;
+    text-decoration: none;
     transform: scale(1.02);
 }
 .first-boxOne img {
