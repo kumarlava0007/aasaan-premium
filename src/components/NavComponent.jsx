@@ -8,7 +8,7 @@ export default function NavComponent() {
             <div className="containerOne">
                 <div className="boxOne">
                     <div className="first-boxOne">
-                        <Link to="/aasaan-premium"><img src={logo} alt="logo" className="nav-logo"/></Link>
+                        <Link to="/"><img src={logo} alt="logo" className="nav-logo"/></Link>
                         <div className="navContent">
                             <Link to="/insurance" className="linksOne"><h6>Insurance</h6></Link>
                             <Link to="/getAQuote" className="linksOne"><h6>Get a Quote</h6></Link>
