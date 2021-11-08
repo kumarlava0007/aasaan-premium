@@ -7,7 +7,7 @@
     position: fixed;
     width: 100vw;
     z-index: 1;
-    background-color: whitesmoke;
+    background-color: #ffffff;
     padding: 10px 0;
     top: 0%;
     border-bottom: 1px solid rgb(186, 186, 186);
@@ -25,8 +25,8 @@
     margin: 2px 5px;
 }
 .boxOne .navContent{
-    background-color: #4060bf;
-    border-radius: 30px;
+    background-color: #5b4cfa;
+    border-radius: 10px;
     padding: 10px 10px;
 }
 
@@ -36,7 +36,9 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
+}
+.first-boxOne{
+    margin-left: 70px;
 }
 .second-boxOne{
     width: 30%;
@@ -57,26 +59,25 @@
 }
 .linksOne:hover{
     text-decoration: none;
-    transform: scale(1.1);
+    transform: scale(1.04);
     color: white;
 }
 .linksTwo {
     text-decoration: none;
-    background-color: #4060bf;
-    color: white;
+    color: #5b4cfa;
     font-size: 15px;
-    padding: 8px;
-    border: 1px solid #4060bf;
-    border-radius: 20px;
-    transition: transform 0.2s;
+    padding: 5px 8px;
+    border: 1px solid #5b4cfa;
+    border-radius: 10px;
 }
 .linksTwo:hover{
-    color: white;
+    color: #3728db;
     text-decoration: none;
-    transform: scale(1.02);
+    border: 2px solid #5b4cfa;
 }
+
 .first-boxOne img {
-    width: 60px;
+    width: 110px;
     margin-top: 10px;
 }
 

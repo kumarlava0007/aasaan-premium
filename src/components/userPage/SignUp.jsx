@@ -10,7 +10,8 @@ const SignUp = () => {
                 </Image>
                 <Head>
                 <AvtarIcon>
-                    <PersonAddAlt1 style={{ color: "#4060BF",background:"whitesmoke",height:"135px",width:"141px",borderRadius:"70px 70px 60px 40px",padding:"20px"}}/>
+                    {/* <PersonAddAlt1 style={{ color: "#4060BF",background:"whitesmoke",height:"135px",width:"141px",borderRadius:"70px 70px 60px 40px",padding:"20px"}}/> */}
+                    <i class="fa fa-user-plus fa-5x" aria-hidden="true" style={{ paddingLeft: "30px", color: "#4060BF",background:"whitesmoke",height:"135px",width:"141px",borderRadius:"70px 70px 60px 40px",padding:"20px"}}></i>
                 </AvtarIcon>
                 <InformationField>
                     <FieldName>Full Name</FieldName>

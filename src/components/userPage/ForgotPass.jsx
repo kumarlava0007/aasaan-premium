@@ -10,7 +10,8 @@ const ForgotPass = () => {
                 </Image>
                 <SubHead>
                 <Icon>
-                    <HandymanIcon style={{ color: "#4060BF",background:"whitesmoke",height:"135px",width:"141px",borderRadius:"70px 70px 60px 40px",padding:"20px"}}/>
+                    {/* <HandymanIcon style={{ color: "#4060BF",background:"whitesmoke",height:"135px",width:"141px",borderRadius:"70px 70px 60px 40px",padding:"20px"}}/> */}
+                    <i class="fas fa-tools"></i>
                 </Icon>
                 <InformationField>
                     <FieldName>Enter Email</FieldName>
