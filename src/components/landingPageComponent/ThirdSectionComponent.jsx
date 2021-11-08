@@ -26,7 +26,7 @@ export default function ThirdSectionComponent() {
                     <br /><br />
                 </div>
             </div>
-
+            
             <div className="main-three">
                 <h1 className="headingTwo"><strong>Core differentiators that define our business</strong></h1>
                 <div className="imgs">

@@ -10,7 +10,8 @@ const LoginPage = () => {
             </LoginImage>
             <Login>
                 <Avtaricon>
-                <Avatar style={{ color: "#4060BF",background:"whitesmoke",height:"135px",width:"141px"}}/>
+                    {/* style={{ color: "#4060BF",background:"whitesmoke",height:"135px",width:"141px"}} */}
+                    <i class="fa fa-user fa-5x" aria-hidden="true" style={{borderRadius: "50%", color: "#4060BF",background:"whitesmoke",height:"135px",width:"141px"}}></i>
                 </Avtaricon>
                 <Information>
                  <FieldName>Username/Email</FieldName>
