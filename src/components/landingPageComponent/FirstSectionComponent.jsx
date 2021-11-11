@@ -19,8 +19,6 @@ export default function FirstSectionComponent() {
                     </div>
                 </div>
                 <div className="firstSection-main-one-second">
-                    {/* <img src="https://static.pbcdn.in/cdn/images/home-v1/pb-promise-new.png" alt="photo" /> */}
-                    {/* <img src="https://zoozoosolutions.com/wp-content/uploads/2020/05/pngwave-7-4.png" alt="image" className="first-section img"/> */}
                     <i class="far fa-handshake fa-7x first-section-img"></i>
                     <div>
                     <h4>A commitment <br /> to our customers</h4>
