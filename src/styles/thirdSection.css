@@ -15,7 +15,7 @@
 
 .content {
     width: 85%;
-    height: 70vh;
+    height: 60vh;
     background-color: white;
     padding: 40px;
     display: flex;
@@ -92,14 +92,21 @@
     padding-bottom: 80px;
 }
 .core {
-    vertical-align: baseline;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
 }
-.imgs {
+.core i {
+    color: #0093D0;
+}
+.main-three-imgs {
     width: 80%;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
 }

@@ -21,9 +21,6 @@
     align-items: center;
     justify-content: center;
 }
-.navContent h6{
-    margin: 2px 5px;
-}
 .boxOne .navContent{
     background-color: #5b4cfa;
     border-radius: 10px;
@@ -37,8 +34,11 @@
     justify-content: space-around;
     align-items: center;
 }
+.navContent p{
+    margin: 0;
+}
 .first-boxOne{
-    margin-left: 70px;
+    margin-left: 50px;
 }
 .second-boxOne{
     width: 30%;
@@ -52,9 +52,8 @@
 
 .linksOne{
     text-decoration: none;
-    /* color: black; */
     color: whitesmoke;
-    font-size: 13px;
+    font-size: 14px;
     transition: transform 0.2s;
 }
 .linksOne:hover{
@@ -72,6 +71,7 @@
 }
 .linksTwo:hover{
     color: #3728db;
+    padding: 4px 7px;
     text-decoration: none;
     border: 2px solid #5b4cfa;
 }
