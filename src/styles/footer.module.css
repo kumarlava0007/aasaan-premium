@@ -1,0 +1,108 @@
+.footerMain {
+    width: 100vw;
+    height: 90vh;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerContainer {
+    color: #ffffff;
+}
+.footerFirstSection {
+    height: 30vh;
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.heading{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 30px;
+}
+.headingsOne {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 30px;
+    margin-left: 10vw;
+}
+.footerPath {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.insuranceList {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+.lists i {
+    margin-right: 10px;
+}
+.lists{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerSecondSection {
+    width: 100vw;
+    height: 10vh;
+    background-color: #ffffff50;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footerSecondSection ul{
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+}
+.footerSecondSection ul li i{
+    font-size: 20px;
+    width: 40px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footerSecondSection ul li i:hover {
+    background-color: #202020;
+    border-radius: 50%;
+}
+
+.paymentContainer {
+    width: 80vw;
+    margin: 20px 0;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.paymentContainer .paymentOptions i{
+    margin: 5px;
+}
+.paymentOptions {
+    margin-bottom: 5vh;
+}
+
+.thirdSection {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #ffffff50;
+}
