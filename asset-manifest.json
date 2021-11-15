@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/aasaan-premium/static/css/main.b7aaf14d.chunk.css",
-    "main.js": "/aasaan-premium/static/js/main.228e4b7b.chunk.js",
-    "main.js.map": "/aasaan-premium/static/js/main.228e4b7b.chunk.js.map",
-    "runtime-main.js": "/aasaan-premium/static/js/runtime-main.5a86e6cf.js",
-    "runtime-main.js.map": "/aasaan-premium/static/js/runtime-main.5a86e6cf.js.map",
-    "static/js/2.ea294ec6.chunk.js": "/aasaan-premium/static/js/2.ea294ec6.chunk.js",
-    "static/js/2.ea294ec6.chunk.js.map": "/aasaan-premium/static/js/2.ea294ec6.chunk.js.map",
-    "static/js/3.9c64cd5e.chunk.js": "/aasaan-premium/static/js/3.9c64cd5e.chunk.js",
-    "static/js/3.9c64cd5e.chunk.js.map": "/aasaan-premium/static/js/3.9c64cd5e.chunk.js.map",
+    "main.css": "/aasaan-premium/static/css/main.a831dee1.chunk.css",
+    "main.js": "/aasaan-premium/static/js/main.94deb410.chunk.js",
+    "main.js.map": "/aasaan-premium/static/js/main.94deb410.chunk.js.map",
+    "runtime-main.js": "/aasaan-premium/static/js/runtime-main.93b9d739.js",
+    "runtime-main.js.map": "/aasaan-premium/static/js/runtime-main.93b9d739.js.map",
+    "static/js/2.92a0749f.chunk.js": "/aasaan-premium/static/js/2.92a0749f.chunk.js",
+    "static/js/2.92a0749f.chunk.js.map": "/aasaan-premium/static/js/2.92a0749f.chunk.js.map",
+    "static/js/3.f4235267.chunk.js": "/aasaan-premium/static/js/3.f4235267.chunk.js",
+    "static/js/3.f4235267.chunk.js.map": "/aasaan-premium/static/js/3.f4235267.chunk.js.map",
     "index.html": "/aasaan-premium/index.html",
-    "static/css/main.b7aaf14d.chunk.css.map": "/aasaan-premium/static/css/main.b7aaf14d.chunk.css.map",
-    "static/js/2.ea294ec6.chunk.js.LICENSE.txt": "/aasaan-premium/static/js/2.ea294ec6.chunk.js.LICENSE.txt",
+    "static/css/main.a831dee1.chunk.css.map": "/aasaan-premium/static/css/main.a831dee1.chunk.css.map",
+    "static/js/2.92a0749f.chunk.js.LICENSE.txt": "/aasaan-premium/static/js/2.92a0749f.chunk.js.LICENSE.txt",
     "static/media/AasaanPremiumLogo.de7dbef6.png": "/aasaan-premium/static/media/AasaanPremiumLogo.de7dbef6.png",
     "static/media/twoWom.f3dc5aad.png": "/aasaan-premium/static/media/twoWom.f3dc5aad.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5a86e6cf.js",
-    "static/js/2.ea294ec6.chunk.js",
-    "static/css/main.b7aaf14d.chunk.css",
-    "static/js/main.228e4b7b.chunk.js"
+    "static/js/runtime-main.93b9d739.js",
+    "static/js/2.92a0749f.chunk.js",
+    "static/css/main.a831dee1.chunk.css",
+    "static/js/main.94deb410.chunk.js"
   ]
 }
