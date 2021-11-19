@@ -20,7 +20,7 @@ export default function SecondSectionComponent() {
                             <div class="main-timeline2">
                                 <div class="timeline">
                                     <span class="icon fa fa-globe"></span>
-                                    <a href="second.html" class="timeline-content">
+                                    <a href="#" class="timeline-content">
                                         <h3 class="title">Provide us your Details</h3>
                                         <p class="description">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus

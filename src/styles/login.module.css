@@ -1,0 +1,74 @@
+.container {
+    width: 90vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.formContainer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.sectionOne {
+ margin-left: 10vw;
+}
+
+.formTab {
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.formInput {
+    width: 100%;
+    height: 50px;
+    border: 1px solid gray;
+    padding: 5px 5px 5px 15px;
+    margin-bottom: 10px ;
+    border-radius: 5px;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: white;
+    font-size: 16px;
+}
+
+.forgPass {
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.buttonOne, .buttonTwo {
+    height: 50px;
+    padding: 5px;
+    margin-bottom: 15px ;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.buttonOne {
+    width: 370px;
+    background-color: #5b4cfa;
+}
+.buttonTwo {
+    width: 370px;
+    margin-top: 20px;
+    background-color: #33c062;
+}
+
+.hr {
+    width: 100%;
+    margin: 0;
+}

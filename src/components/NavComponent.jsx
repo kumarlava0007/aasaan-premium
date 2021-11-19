@@ -10,12 +10,12 @@ export default function NavComponent() {
                     <div className="first-boxOne">
                         <Link to="/"><img src={logo} alt="logo" className="nav-logo"/></Link>
                         <div className="navContent">
-                            <Link to="/insurance" className="linksOne"><h6>Insurance</h6></Link>
-                            <Link to="/getAQuote" className="linksOne"><h6>Get a Quote</h6></Link>
-                            <Link to="/payabill" className="linksOne"><h6>Pay a Bill</h6></Link>
-                            <Link to="/claims" className="linksOne"><h6>Claims</h6></Link>
-                            <Link to="/findAnAgent" className="linksOne"><h6>Find an Agent</h6></Link>
-                            <Link to="/about" className="linksOne"><h6>About</h6></Link>
+                            <Link to="/insurance" className="linksOne"><p>Insurance</p></Link>
+                            <Link to="/getAQuote" className="linksOne"><p>Get a Quote</p></Link>
+                            <Link to="/payabill" className="linksOne"><p>Pay a Bill</p></Link>
+                            <Link to="/claims" className="linksOne"><p>Claims</p></Link>
+                            <Link to="/findAnAgent" className="linksOne"><p>Find an Agent</p></Link>
+                            <Link to="/about" className="linksOne"><p>About</p></Link>
                         </div>
                     </div>
                     <div class="second-boxOne">
