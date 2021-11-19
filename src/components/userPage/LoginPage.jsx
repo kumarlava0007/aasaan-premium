@@ -1,95 +1,26 @@
 import React from 'react'
-import style from "styled-components"
-import Avatar from "@material-ui/core/Avatar"
-import { Link } from 'react-router-dom'
-const LoginPage = () => {
+import Styles from '../../styles/login.module.css';
+import { Link } from 'react-router-dom';
+
+export default function LoginPage() {
     return (
-        <HeadLogin>
-            <LoginImage>
-                <img src="https://image.freepik.com/free-vector/cartoon-man-sitting-home-with-laptop_74855-6963.jpg" height="100%" width="750px"/>
-            </LoginImage>
-            <Login>
-                <Avtaricon>
-                <Avatar style={{ color: "#4060BF",background:"whitesmoke",height:"135px",width:"141px"}}/>
-                </Avtaricon>
-                <Information>
-                 <FieldName>Username/Email</FieldName>
-                 <i class="fa fa-envelope-o fa-lg" aria-hidden="true" style={{color:"#4060BF"}}/><InputField type="email" placeholder="Enter username"/>
-                <FieldName>Enter Password</FieldName>
-                <i class="fa fa-key fa-lg" aria-hidden="true" style={{color:"red"}}/><InputField type="password" placeholder="Enter password"/><br/>
-                <NewPage>
-                   <Link to="/signup"><SignUp>SignUp</SignUp></Link>
-                   <Link to="/forgotpassword"><Forgot>Forgot Password ?</Forgot></Link>
-                </NewPage>
-                <Check>LogIn</Check>
-                </Information>
-          </Login>
-        </HeadLogin>
+        <div className={Styles.container}>
+            <div className={Styles.sectionOne}>
+                <img src="https://image.freepik.com/free-vector/cartoon-man-sitting-home-with-laptop_74855-6963.jpg" alt="" />
+                <h3 style={{textAlign: "center"}}><strong>Login To Find Premium Plans</strong></h3>
+            </div>
+            <div className={Styles.sectionOne}>
+                <div className={Styles.formContainer}>
+                    <form className={Styles.formTab}>
+                        <input type="email" id="username" required placeholder="Email address or phone number" className={Styles.formInput}/>
+                        <input type="password" id="password" required placeholder="Password" className={Styles.formInput} />
+                        <button className={Styles.buttonOne} type="submit">Log In</button>
+                        <Link className={Styles.forgPass} to="/forgotpassword">Forgotten Password</Link>
+                        <hr className={Styles.hr}/>
+                        <Link to="/signUp"><button className={Styles.buttonTwo}>Create New Account</button></Link>
+                    </form>
+                </div>
+            </div>
+        </div>
     )
 }
-
-export default LoginPage
-const LoginImage=style.div`
-margin-top:45px;
-`
-const HeadLogin=style.div`
-margin-top:100px;
-display:flex;
-justify-content:space-around;
-`
-const Avtaricon=style.div`
-display:flex;
-justify-content:center;
-`
-const Login=style.div`
-text-align:center;
-`
-const FieldName=style.h4`
-margin-top:20px;
-margin-bottom:10px;
-`
-const InputField=style.input`
-width:400px;
-height:40px;
-font-size:20px;
-border-style:none;
-background-color:whitesmoke;
-outline:none;
-border-bottom:1px solid #4060BF;
-text-indent:10px;
-`
-const Information=style.div`
-margin-top:-60px;
-box-shadow:7px 7px 8px rgba(100, 100, 100, 0.5);
-background-color:whitesmoke;
-border-radius:10px;
-padding:60px 50px 60px 50px;
-`
-const Check=style.button`
-margin-top:20px;
-padding:3px 70px 3px 70px;
-font-weight:bolder;
-background-color:green;
-color:white;
-cursor:pointer;
-border:2px solid green;
-border-radius:5px;
-font-size:20px;
-`
-const NewPage=style.div`
-margin-top:20px;
-display:flex;
-justify-content:space-evenly;
-`
-const SignUp=style.h6`
-color:black;
-:hover{
-    text-decoration:underline;
-}
-`
-const Forgot=style.h6`
-color:black;
-:hover{
-    text-decoration:underline;
-}
-`
