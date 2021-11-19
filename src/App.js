@@ -6,6 +6,7 @@ import LoginPage from "./components/userPage/LoginPage"
 import SignUp from "./components/userPage/SignUp";
 import ForgotPass from "./components/userPage/ForgotPass";
 import Footer from "./components/Footer";
+import About from "./components/About";
 function App() {
   return (
       <Router>
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={HomePage}/>
           <Route path="/login" component={LoginPage}/>
+          <Route path="/about" component={About}/>
           <Switch>
             <Route path="/signup" component={SignUp}/>
             <Route path="/forgotpassword" component={ForgotPass}/>
