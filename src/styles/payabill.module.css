@@ -1,0 +1,41 @@
+.mainContainer {
+    height: 100vh;
+}
+.container {
+    width: 90vw;
+    margin-left: 10vw;
+    padding-top: 15vh;
+    height: 50vh;
+}
+.payABill input, select{
+    width: 250px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    border:2px solid #5b4cfa;
+    border-radius: 3px;
+}
+.word {
+    text-align: center;
+}
+
+.buttonThree {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #5b4cfa;
+    color: white;
+    border: none;
+}
+
+.containerThree {
+    width: 100%;
+    background-color: #F6F9FE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
