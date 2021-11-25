@@ -3,14 +3,83 @@
     height: 100vh;
     margin-left: 5vw;
 }
+.containerOne {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
 
 .grids {
-    width: 1000px;
     display: grid;
-    grid-template-columns: 400px 400px;
+    grid-template-columns: 400px;
+    height: 20vh;
+    margin-top: 10px;
 }
 .container {
-    width: 90%;
-    margin-left: 7%;
+    width: 45vw;
+    margin-left: 5vw;
     margin-top: 15vh;
+    height: 50vh;
+}
+
+.buttonOne, .buttonTwo {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.buttonOne {
+    background-color: #5b4cfa;
+    color: white;
+    border: none;
+}
+
+.buttonTwo {
+    border: 1px solid #5b4cfa;
+    background-color: white;
+    color: #5b4cfa;
+}
+
+.buttonOne:hover {
+    background-color: #3527d1;
+}
+
+.buttonTwo:hover{
+    padding: 9px;
+    border: 2px solid #3527d1;
+    color: #3527d1;
+}
+.claimsCat{
+    display: flex;
+    flex-direction: row;
+}
+.claimsContainer i {
+    width: 30px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.claimsCat p{
+    color: gray;
+    font-weight: 700;
+    font-size: small;
+}
+
+.logo {
+    margin: 30px;
+    width: 200px;
+}
+
+.store {
+    width: 100px;
+    margin: 10px;
+}
+
+.containerTwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 80px;
 }

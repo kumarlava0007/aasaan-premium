@@ -1,4 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import Styles from '../../styles/payabill.module.css';
+import { Link } from 'react-router-dom';
+
 
 export default function PayABill() {
     const [numToPay, setnumToPay] = useState("Phone Number");
@@ -13,24 +16,28 @@ export default function PayABill() {
         else setnumToPay("Key Code")
     }
     return (
-        <div>
-            <div className="container">
-                <h2 className="tinyWord">Pay your insurance bill</h2>
-                <h4>Make a quick, one-time insurance payment.</h4>
-                <div className="payABill">
+        <div className={Styles.mainContainer}>
+            <div className={Styles.container}>
+                <h3><strong>Pay your insurance bill</strong></h3>
+                <br />
+                <h5>Make a quick, one-time insurance payment.</h5>
+                <br />
+                <div className={Styles.payABill}>
                     <select name="numbToPay" id="numbToPay" onChange={callNumToChange}>
                         <option value="phoneNumber">Phone Number</option>
                         <option value="policyNumber">Policy Number</option>
                         <option value="keyCode">Key Code</option>
                     </select>
                     <input type="text" placeholder={numToPay} />
-                    <input type="text" placeholder="Date Of Birth"/>
-                    <button className="button-three">Pay Now</button>
+                    <input type="text" placeholder="Date Of Birth" />
+                    <button className={Styles.buttonThree}>Pay Now</button>
                 </div>
             </div>
             <br /><br /><br />
-            <br />
-            <h1 className="word">Log in to continue your quote </h1>
+            <div className={Styles.containerThree}>
+                <h4 className={Styles.word}><strong>Log in to review billing history, update payment methods, and more.</strong></h4><br />
+                <Link to="/login"><button className={Styles.buttonThree}><strong>Log In</strong></button></Link>
+            </div>
         </div>
     )
 }
