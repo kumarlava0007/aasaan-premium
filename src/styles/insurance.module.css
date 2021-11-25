@@ -1,0 +1,46 @@
+.container{
+   margin-top: 100px;
+}
+.container h2{
+    margin-left: 80px;
+}
+.cards{
+    background: whitesmoke;
+    margin: 40px 30px 40px 30px;
+    padding: 30px;
+    border-radius: 15px;
+}
+.cards1{
+    display: flex;
+}
+.cards1 i{
+    color: #5041ec;
+    padding: 8px 20px 0px 20px;
+    font-weight: bold;
+}
+.cards1 p{
+    color: #5041ec;
+    font-size: 20px;
+    font-weight: bold;
+}
+.cards2{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+.cards2 p{
+    width: 70%;
+}
+.buyBtn{
+    cursor: pointer;
+    background-color: #6053f7;
+    height: 50px;
+    color: whitesmoke;
+    padding: 7px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+.buyBtn:hover{
+    background-color: #5041ec;
+    transform: scale(1.03);
+}
