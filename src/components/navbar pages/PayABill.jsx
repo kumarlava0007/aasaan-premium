@@ -7,10 +7,10 @@ export default function PayABill() {
     const [numToPay, setnumToPay] = useState("Phone Number");
     function callNumToChange(e) {
         const num = e.target.value;
-        if (num == "phoneNumber") {
+        if (num === "phoneNumber") {
             setnumToPay("Phone Number")
         }
-        else if (num == "policyNumber") {
+        else if (num === "policyNumber") {
             setnumToPay("Policy Number")
         }
         else setnumToPay("Key Code")
