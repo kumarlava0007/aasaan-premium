@@ -18,6 +18,7 @@ const Insurance = () => {
         )
     })
     return (
+<<<<<<< HEAD
         <div className={classes.container}>
             {/* <br />
             <br />
@@ -28,6 +29,13 @@ const Insurance = () => {
                 {cards}
             </div>
         </div>
+=======
+        <>
+            <br /><br />
+            <br /><br />
+            <h2>Insurance Page</h2>
+        </>
+>>>>>>> 56d90dd (25nov 2:42pm)
     )
 }
 

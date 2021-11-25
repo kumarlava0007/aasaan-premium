@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/firstSection.css';
 import { Data } from './Data';
 
@@ -33,7 +34,7 @@ export default function FirstSectionComponent() {
                     <i class="far fa-handshake fa-7x first-section-img"></i>
                     <div>
                     <h4>A commitment <br /> to our customers</h4>
-                    <button className="second-button">Know more</button>
+                    <Link to="/insurance"><button className="second-button">Know more</button></Link>
                     </div>
                 </div>
             </div>
