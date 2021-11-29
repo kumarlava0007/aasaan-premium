@@ -94,9 +94,9 @@
 }
 .cards-card {
   display: inline-block;
-  width: 10rem;
-  height: 9rem;
-  margin: 2%;
+  width: 17rem;
+  height: 10rem;
+  margin: 3%;
   transition: transform 0.2s;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;

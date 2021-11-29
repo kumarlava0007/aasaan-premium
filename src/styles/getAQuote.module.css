@@ -1,0 +1,201 @@
+.contentStart{
+    background: whitesmoke;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+}
+.getAQuote {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+    font-size: xx-small;
+    color: rgb(74, 58, 212);
+    padding: 5px;
+    margin: 45vh 30%;
+    border-radius: 10px;
+    border: 1px solid rgb(74, 58, 212);
+}
+.getAQuote:hover{
+    cursor: pointer;
+    background-color: rgb(220, 217, 250);
+}
+.secondPage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.secondPage img{
+    width: 500px;
+    height: 400px;
+    opacity: 0.9;
+    margin: 0px 150px 0px -150px;
+}
+.types{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    width: 450px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 60px -100px 0px 100px;
+}
+.heading{
+    text-align: center;
+    color: rgb(72, 59, 190);
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+.types select{
+    border: 1px solid gray;
+}
+.types select:focus{
+    outline: none;
+}
+.sorryPage p{
+    margin-top: 20px;
+    color: red;
+    text-align: center;
+}
+.sorryPage h5{
+    text-align: center;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    width: 450px;
+    margin: 60px -100px 0px 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.details input{
+    width: 70%;
+    height: 40px;
+    text-indent: 10px;
+}
+.details input:focus{
+    outline: none;
+}
+.types button, .divButton button{
+    width: 90px;
+    height: 40px;
+    margin: 0px 50px;
+    border-radius: 10px;
+}
+.types button:enabled, .divButton button:enabled{
+    background: rgb(78, 106, 199);
+    color: white;
+    cursor: pointer;
+}
+.types button:disabled, .divButton button:disabled{
+    background: gray;
+    color: lightgray;
+    cursor: not-allowed;
+}
+.personalInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    width: 450px;
+    margin: 60px -100px 0px 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.personalInfo input{
+    margin: 5px 10px;
+    padding: 10px;
+}
+.personalInfo input:focus{
+    outline: none;
+}
+.checkbox{
+    display: flex;
+}
+.personalInfo input[name="address"]{
+    width: 95%;
+}
+.personalInfo .maritalStatus label{
+    margin-left: 40px;
+}
+.assetDetails{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    width: 450px;
+    margin: 60px -100px 0px 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.assetDetails input, .assetDetails select{
+    border: 1px solid gray;
+    margin: 0 0 0 10px;
+    padding: 10px;
+    float: right;
+    width: 60%;
+    margin-bottom: 20px;
+}
+.assetDetails input:focus, .assetDetails select:focus {
+    outline: none;
+}
+.premium{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    width: 450px;
+    margin: 60px -100px 0px 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+}
+.premium > .innerDiv h1{
+    text-align: center;
+    font-weight: bold;
+}
+.premium .innerDiv .radioDiv{
+    display: flex;
+    justify-content: space-around;
+}
+.premium .radioDiv {
+    margin: 0.5em;
+    font-size: 1.2em;
+    padding: 0.5em;
+    
+}
+.premium .radioDiv input{
+    cursor: pointer;
+}
+.premium .innerDiv h1, .premium .innerDiv h2{
+    text-align: center;
+
+}
+.premium .innerDiv .innerHeading{
+    display: flex;
+    justify-content: center;
+}
+.premium .innerDiv .secondInnerHeading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.premium .innerDiv .secondInnerHeading p{
+    color: green;
+    text-align: center;
+}
+.premium .innerDiv .innerHeading h5{
+    color: gray;
+    margin: 0 10px;
+    text-decoration:line-through;
+}
+.premium .innerDiv .innerHeading h3, .premium .innerDiv .secondInnerHeading h3{
+    color: rgb(74, 58, 212);
+}
