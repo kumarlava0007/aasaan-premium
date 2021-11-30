@@ -11,7 +11,7 @@ import PayABill from "./components/navbar pages/PayABill";
 import Insurance from "./components/navbar pages/Insurance";
 import GetAQuote from "./components/navbar pages/GetAQuote";
 import Claims from "./components/navbar pages/Claims";
-import FindAnAgent from "./components/navbar pages/FindAnAgent";
+import FindAnAgent from "./components/navbar pages/FindAnAgentTwo";
 
 function App() {
   return (
