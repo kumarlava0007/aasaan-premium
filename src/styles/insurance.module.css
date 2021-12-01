@@ -33,14 +33,14 @@
 }
 .buyBtn{
     cursor: pointer;
-    background-color: #6053f7;
-    height: 50px;
-    color: whitesmoke;
-    padding: 7px;
-    border-radius: 10px;
-    transition: transform 0.2s;
+    background-color: #5b4cfa;
+    height: 40px;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 200px;
 }
 .buyBtn:hover{
-    background-color: #5041ec;
-    transform: scale(1.03);
+    opacity: 0.9;
 }

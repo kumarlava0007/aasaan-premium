@@ -29,7 +29,7 @@ const GetAQuote = () => {
     const[flagMonthly, setFlagMonthly] = useState(false);
 
     const [zipcode, setZipcode] = useState("");
-
+    const history = useHistory();
     let count = 0;
 
     const handleHead = () => {
@@ -141,6 +141,10 @@ const GetAQuote = () => {
     const handleBackProduct = () => {
         setFlagFour(true);
         setFlagFive(false);
+    }
+
+    const handleBuyBtn = () => {
+        history.push('login');
     }
 
     return(
@@ -465,7 +469,7 @@ const GetAQuote = () => {
                             <br />
                             <div className = {classes.divButton}>
                                 <button className={classes.backButton} onClick={handleBackbutton}>Back</button>
-                                <button className = {classes.buyBtn}>Buy Plan</button>
+                                <button className = {classes.buyBtn} onClick={handleBuyBtn}>Buy Plan</button>
                             </div>
 
                         </div>}

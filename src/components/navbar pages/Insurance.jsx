@@ -19,10 +19,6 @@ const Insurance = () => {
     })
     return (
         <div className={classes.container}>
-            {/* <br />
-            <br />
-            <br />
-            <br /> */}
             <h2>Get Insured easily with us</h2>  
             <div className={classes.subContainer}>
                 {cards}

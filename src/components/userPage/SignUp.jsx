@@ -19,6 +19,7 @@ export default function SignUp() {
                         <input type="password" id="Cpassword" required placeholder="Confirm Password" className={Styles.formInput} />
                         <hr className={Styles.hr}/>
                         <button className={Styles.buttonOne} type="submit">Sign Up</button>
+                        <Link className={Styles.account} to="/login">Already have an account?</Link>
                     </form>
                 </div>
             </div>

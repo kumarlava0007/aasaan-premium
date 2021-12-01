@@ -93,11 +93,12 @@
   margin: 5% 10% 5% 13%;
 }
 .cards-card {
+  /* background-color: #F6F9FE; */
   display: inline-block;
   width: 17rem;
   height: 10rem;
   margin: 3%;
-  transition: transform 0.2s;
+  /* transition: transform 0.2s; */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
   text-align: center;
@@ -105,7 +106,7 @@
   padding: 20px 0 0 0;
 }
 .cards-card:hover{
-  transform: scale(1.03);
+  /* transform: scale(1.03); */
 }
 .cards-card p {
   font-size: 13px;
