@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/aasaan-premium/static/css/main.8310d1df.chunk.css",
-    "main.js": "/aasaan-premium/static/js/main.bd8c5e59.chunk.js",
-    "main.js.map": "/aasaan-premium/static/js/main.bd8c5e59.chunk.js.map",
+    "main.js": "/aasaan-premium/static/js/main.3bbced89.chunk.js",
+    "main.js.map": "/aasaan-premium/static/js/main.3bbced89.chunk.js.map",
     "runtime-main.js": "/aasaan-premium/static/js/runtime-main.3083b2e9.js",
     "runtime-main.js.map": "/aasaan-premium/static/js/runtime-main.3083b2e9.js.map",
     "static/js/2.6e42f7f8.chunk.js": "/aasaan-premium/static/js/2.6e42f7f8.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.3083b2e9.js",
     "static/js/2.6e42f7f8.chunk.js",
     "static/css/main.8310d1df.chunk.css",
-    "static/js/main.bd8c5e59.chunk.js"
+    "static/js/main.3bbced89.chunk.js"
   ]
 }
