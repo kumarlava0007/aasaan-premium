@@ -70,12 +70,12 @@ let address=[
     {
         "pincode":500016,
         "nearloc":"Aasan Premium Ameerpet, Near Reliance Fresh",
-        "dist":"Telengana-151001"
+        "dist":"Telengana-500016"
     },
     {
         "pincode":500016,
         "nearloc":"Aasan Premium Begumpet",
-        "dist":"Telangana-151001"
+        "dist":"Telangana-500016"
     },
     {
         "pincode":500038,
