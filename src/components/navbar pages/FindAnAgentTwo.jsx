@@ -80,12 +80,12 @@ let address=[
     {
         "pincode":500038,
         "nearloc":"Aasan Premium Panjagutta",
-        "dist":"Telangana-151001"
+        "dist":"Telangana-500038"
     },
     {
         "pincode":500016,
         "nearloc":"Aasan Premium Ameerpet, Near Yellama Pochama Devasthanam",
-        "dist":"Telangana-151001"
+        "dist":"Telangana-500016"
     },
     {
         "pincode":500018,
@@ -100,7 +100,7 @@ export default function FindAnAgentTwo() {
              // console.log("button clicked")
         let pin=document.getElementById("pincode").value;
         // let nearestlocation=document.getElementById("nearestloc");
-        console.log(pin);
+        // console.log(pin);
         let add1=address.filter((e)=>{
             if(pin==e.pincode)
             return<>
