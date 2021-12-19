@@ -35,12 +35,22 @@ export default function LoginPage() {
           console.log('Image URL: ' + profile.getImageUrl());
           console.log('Email: ' + profile.getEmail());
           }
+<<<<<<< HEAD
         //   const signOut = () => {
         //     var auth2 = gapi.auth2.getAuthInstance();
         //     auth2.signOut().then(function () {
         //     console.log('User signed out.');
         //     });
         // }
+=======
+      
+          const signOut = () => {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+            console.log('User signed out.');
+            });
+        }
+>>>>>>> 99bd16b (sunday work)
     return (
         <div className={Styles.container}>
             <div className={Styles.sectionOne}>
@@ -56,8 +66,8 @@ export default function LoginPage() {
                         <Link className={Styles.forgPass} to="/forgotpassword">Forgotten Password</Link>
                         <div className="g-signin2"
                         //  className={Styles.signInWithGoogle} 
-                         data-onsuccess={onSignIn}/><br />
-                        {/* <a href="#/login" onClick={signOut}>Sign out</a> */}
+                         data-onSuccess={onSignIn}/><br />
+                        <a href="#/login" onClick={signOut}>Sign out</a>
                         <hr className={Styles.hr}/>
                         <Link to="/signUp"><button className={Styles.buttonTwo}>Create New Account</button></Link>
                     </form>

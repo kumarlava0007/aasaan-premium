@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/firstSection.css';
@@ -14,6 +15,7 @@ export default function FirstSectionComponent() {
             </div>           
         )
     })
+  
     return (
         <div className="firstSection-main">
             <div className="firstSection-main-one">
@@ -38,11 +40,13 @@ export default function FirstSectionComponent() {
                     </div>
                 </div>
             </div>
+         
             <div className="firstSection-main-two">
                 <div className="two-container-cards">
                         {itemData}
                 </div>
             </div>
+            
         </div>
     )
 }
