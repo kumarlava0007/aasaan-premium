@@ -75,3 +75,27 @@
 /* .signInWithGoogle{
 
 } */
+.btn, .deactivate{
+    width: 370px;
+    height: 50px;
+    padding: 5px;
+    margin-bottom: 15px ;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+.btn{
+    background-color: #5b4cfa;
+    cursor: pointer;
+}
+.deactivate{
+    background: gray;
+    color: lightgray;
+    cursor: not-allowed;
+}
+.btn:focus, .deactivate:focus{
+    outline: none;
+}
