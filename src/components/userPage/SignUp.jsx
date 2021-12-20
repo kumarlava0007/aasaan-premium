@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react'
 import Styles from '../../styles/login.module.css';
 import { Link } from 'react-router-dom';
 
-// import axios from 'axios';
-// import { Domain } from '../../Config';
+import axios from 'axios';
+import { Domain } from '../../Config';
 export default function SignUp() {
     // const [inputs,setInputs]=useState({
     //     firstName:"",
@@ -112,7 +112,7 @@ export default function SignUp() {
       const handleSubmit = (e) => {
   
         e.preventDefault();
-        if(newPasswordError===false && 
+        if(newPasswordError===false && passwordError === false && emailError === false && fNameError === false && lNameError === false &&
             // btn_class===Styles.btn
             setToggleClass(true)
             )
