@@ -3,7 +3,7 @@ import Styles from '../../styles/login.module.css';
 import { Link,useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { Domain } from '../../Config';
-// import axios from 'axios';
+import axios from 'axios';
 import LoginContext from '../../Context';
 export default function LoginPage() {
 
@@ -59,14 +59,15 @@ export default function LoginPage() {
       },[password,setPassword])
     
 
-    // const [inputs,setInputs]=useState({});
-    // const setLogged=React.useContext(LoginContext)['setLogged'];
-    // let history=useHistory()
-    // const handleChange = (event) => {
-    //     const name = event.target.name;
-    //     const value = event.target.value;
-    //     setInputs(values => ({...values, [name]: value}))
-    //   }
+    const [inputs,setInputs]=useState({});
+    const setLogged=React.useContext(LoginContext)['setLogged'];
+    let history=useHistory()
+    const handleChange = (event) => {
+        setEmail(event.target.value)
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({...values, [name]: value}))
+      }
     // const handleSubmit = async(e) => {
     //       e.preventDefault();
     //       const REGISTER_URL=Domain+"/login"
@@ -108,7 +109,9 @@ export default function LoginPage() {
                     >
                         <input type="email" id="username" required placeholder="Email address or phone number" className={Styles.formInput} name='mailId' 
                         // onChange={handleChange} value={inputs.mailId}
-                        onChange={(e)=> setEmail(e.target.value)} value={email}          
+                        // onChange={(e)=> setEmail(e.target.value)} 
+                        onChange={handleChange}
+                        value={email}          
                        />
                         <div style={{ fontSize: 14, color: "red" }}>
                             {emailError}
