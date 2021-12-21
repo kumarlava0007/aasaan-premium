@@ -7,44 +7,38 @@ import axios from 'axios';
 import LoginContext from '../../Context';
 export default function LoginPage() {
 
-    const [email, setEmail] = useState("");
+    const [mailId, setmailId] = useState("");
     const [password, setPassword] = useState("");
-  
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
     const [toggleClass, setToggleClass] = useState(false);
-
-  
+    const [inputs,setInputs]=useState({});
+    const setLogged=React.useContext(LoginContext)['setLogged'];
     var validEmail = /^[a-zA-z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}/;
     var validPwd =  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]/;
 
     useEffect(()=>{
         if(emailError===false && passwordError===false &&
-          email !== "" && password !== ""
+          mailId !== "" && password !== ""
           ){
               console.log("all false");
-            //   btn_class = Styles.btn;
             setToggleClass(true);
           }
-      },[emailError,passwordError, password, email])
-
-    const handleSubmit = (e) => {
-      e.preventDefault();
-    }  
+      },[emailError,passwordError, password, mailId])
     useEffect(()=>{
-        if(email.length === 0){
+        if(mailId.length === 0){
           setEmailError('');
         }
-        else if(email.length <= 4)
+        else if(mailId.length <= 4)
           setEmailError('Too short to be an email')
-        else if(!email.includes('@')){
+        else if(!mailId.includes('@')){
           setEmailError('Email must contain "@"')
         }
-        else if (email.endsWith('@') || email.startsWith('@') || !email.match(validEmail))
+        else if (mailId.endsWith('@') || mailId.startsWith('@') || !mailId.match(validEmail))
           setEmailError('Invalid format')
         else
           setEmailError(false)
-      },[email,setEmail])
+      },[mailId,setmailId])
 
       useEffect(()=>{
         if(password.length === 0){
@@ -59,43 +53,27 @@ export default function LoginPage() {
       },[password,setPassword])
     
 
-    const [inputs,setInputs]=useState({});
-    const setLogged=React.useContext(LoginContext)['setLogged'];
+    
     let history=useHistory()
     const handleChange = (event) => {
-        setEmail(event.target.value)
         const name = event.target.name;
         const value = event.target.value;
         setInputs(values => ({...values, [name]: value}))
       }
-    // const handleSubmit = async(e) => {
-    //       e.preventDefault();
-    //       const REGISTER_URL=Domain+"/login"
-    //       await axios
-    //       .post(REGISTER_URL,inputs)
-    //       .then(response=>{
-    //             localStorage.setItem("isLoggedIn",true)
-    //             setLogged(true)
-    //             alert("seccessfully LoggedIn")
-    //             history.push("/insurance")
-    //       }).catch((error)=>{
-    //             alert("wrong credentials")
-    //       })
-    //     }
-        const onSignIn = (googleUser) => {
-          var profile = googleUser.getBasicProfile();
-          console.log('ID: ' + profile.getId()); 
-          console.log('Name: ' + profile.getName());
-          console.log('Image URL: ' + profile.getImageUrl());
-          console.log('Email: ' + profile.getEmail());
-          }
-      
-        //   const signOut = () => {
-        //     var auth2 = gapi.auth2.getAuthInstance();
-        //     auth2.signOut().then(function () {
-        //     console.log('User signed out.');
-        //     });
-        // }
+    const handleSubmit = async(e) => {
+          e.preventDefault();
+          const REGISTER_URL=Domain+"/login"
+      await axios
+      .post(REGISTER_URL,inputs)
+      .then(response=>{
+            localStorage.setItem("isLoggedIn",true)
+            setLogged(true)
+            alert("seccessfully LoggedIn")
+            history.push("/insurance")
+      }).catch((error)=>{
+            alert("wrong credentials")
+      })
+        }
     return (
         <div className={Styles.container}>
             <div className={Styles.sectionOne}>
@@ -108,29 +86,21 @@ export default function LoginPage() {
                     onSubmit={(e) => handleSubmit(e)}
                     >
                         <input type="email" id="username" required placeholder="Email address or phone number" className={Styles.formInput} name='mailId' 
-                        // onChange={handleChange} value={inputs.mailId}
-                        // onChange={(e)=> setEmail(e.target.value)} 
-                        onChange={handleChange}
-                        value={email}          
+                        onChange={handleChange} value={inputs.mailId}
+                        onInput={(e)=> setmailId(e.target.value)}        
                        />
                         <div style={{ fontSize: 14, color: "red" }}>
                             {emailError}
                         </div>
                         <input type="password" id="password" required placeholder="Password" className={Styles.formInput} name='password' 
-                        // onChange={handleChange} value={inputs.password}
-                        onChange={(e)=> setPassword(e.target.value)} value={password} 
+                        onChange={handleChange} value={inputs.password}
+                        onInput={(e)=> setPassword(e.target.value)}
                         />
                         <div style={{ fontSize: 14, color: "red" }}>
                             {passwordError}
                         </div>
-                        <button className={toggleClass ? Styles.btn : Styles.deactivate} type="submit">Log In</button>
+                        <button className={Styles.buttonOne} type="submit">Log In</button>
                         <Link className={Styles.forgPass} to="/forgotpassword">Forgotten Password</Link>
-                        <div className="g-signin2"
-                        //  className={Styles.signInWithGoogle} 
-                         data-onSuccess={onSignIn}/><br />
-                        <a href="#/login" 
-                        // onClick={signOut}
-                        >Sign out</a>
                         <hr className={Styles.hr}/>
                         <Link to="/signUp"><button className={Styles.buttonTwo}>Create New Account</button></Link>
                     </form>
