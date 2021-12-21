@@ -11,11 +11,16 @@ import PayABill from "./components/navbar pages/PayABill";
 import Insurance from "./components/navbar pages/Insurance";
 import GetAQuote from "./components/navbar pages/GetAQuote";
 import Claims from "./components/navbar pages/Claims";
-import FindAnAgent from "./components/navbar pages/FindAnAgent";
-
+import FindAnAgent from "./components/navbar pages/FindAnAgentTwo";
+import LoginContext from './Context'
+import React from "react";
+import {useState } from "react";
 function App() {
+  const [isLogged, setIsLogged] = React.useState(false);
+  const [user,setUser]=React.useState();
   return (
       <Router>
+        <LoginContext.Provider  value={{ isLogged: isLogged, setLogged: setIsLogged }}>
         <NavComponent />
         <Switch>
           <Route exact path="/" component={HomePage}/>
@@ -33,6 +38,7 @@ function App() {
           </Switch>
         </Switch>
         <Footer />
+        </LoginContext.Provider>
       </Router>
     
   );

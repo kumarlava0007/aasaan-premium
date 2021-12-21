@@ -7,7 +7,7 @@ import ip from '../../images/ip.png';
 
 const GetAQuote = () => {
 
-    // const history = useHistory();
+    const history = useHistory();
 
     const [disable, setDisable] = useState(true);
     const [disable2, setDisable2] = useState(true);
@@ -29,8 +29,11 @@ const GetAQuote = () => {
     const[flagMonthly, setFlagMonthly] = useState(false);
 
     const [zipcode, setZipcode] = useState("");
-
     let count = 0;
+
+    const handleBuyBtn = () => {
+        history.push('login');
+    }
 
     const handleHead = () => {
         setHeadFlag(false);
@@ -451,7 +454,7 @@ const GetAQuote = () => {
                             <h4 style={{textAlign: "center"}}>with Deductible of ₹1500</h4>    
                             <div className = {classes.divButton}>
                                 <button className={classes.backButton} onClick={handleBackbutton}>Back</button>
-                                <button className = {classes.buyBtn}>Buy Plan</button>
+                                <button className = {classes.buyBtn} onClick={handleBuyBtn}>Buy Plan</button>
                             </div>
 
                         </div>}
@@ -465,7 +468,7 @@ const GetAQuote = () => {
                             <br />
                             <div className = {classes.divButton}>
                                 <button className={classes.backButton} onClick={handleBackbutton}>Back</button>
-                                <button className = {classes.buyBtn}>Buy Plan</button>
+                                <button className = {classes.buyBtn} onClick={handleBuyBtn}>Buy Plan</button>
                             </div>
 
                         </div>}

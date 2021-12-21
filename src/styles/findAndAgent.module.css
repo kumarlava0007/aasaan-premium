@@ -1,0 +1,56 @@
+.containerOne {
+    width: 90vw;
+    margin-left: 10vw;
+    padding-top: 15vh;
+    height: 30vh;
+}
+.containerTwo {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.inputs {
+    margin-right:10px;
+    border:2px solid #5b4cfa;
+    outline:none;
+    border-radius:5px;
+    width:300px;
+    height: 45px;
+    letter-spacing:10px;
+    text-align:center;
+}
+
+.buttons {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #33c062;
+    color: white;
+    border: none;
+}
+
+.cardSection {
+    display:flex;
+    justify-content:space-evenly;
+}
+
+.cards {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.mainContainerTwo {
+    width: 100vw;
+    height: 50vh;
+    background-color: #F6F9FE;
+}
