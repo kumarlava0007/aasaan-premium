@@ -15,7 +15,7 @@ const GetAQuote = () => {
     const [headFlag, setHeadFlag] = useState(true);
     const [flag, setFlag] = useState(false);
     const [flagOne, setFlagOne] = useState(true);
-    const [flagTwo, setFlagTwo] = useState(false);
+    const [flagTwo, setFlagTwo] = useState(true);
     const [flagOptional, setFlagOptional] = useState(false);
     const [flagThree, setFlagThree] = useState(false);
     const [flagFour, setFlagFour] = useState(false);
@@ -149,11 +149,33 @@ const GetAQuote = () => {
     return(
         <>
         <section className={classes.contentStart}>
-            {headFlag && <div className={classes.getAQuote}
-            // onClick = {(e) => {history.push('/login')}} 
-            onClick = {handleHead}
-            >
-                <h3>Get a Quote →</h3>
+            {headFlag && 
+            <div className={classes.outerDiv}>
+                <h2 className={classes.heading}>Get promising insurance with just few clicks </h2>
+                    <br />
+                    <div>
+                        <h5>Aasaan Premium provides premium on every product you need in</h5>
+                            <h5> just 5 minutes</h5>
+                        <br />
+                    </div>
+                    <div className={classes.paraContent}>
+                        <div>
+                            <ul style={{color: "gray"}}>
+                                <li>Anytime Anywhere</li>
+                                <li>Save time and energy</li>
+                                <li>24*7 Availability</li>
+                            </ul>
+                        </div>
+                        <div className={classes.getAQuote}
+                        // onClick = {(e) => {history.push('/login')}} 
+                        onClick = {handleHead}
+                        >
+                            <h5>Get a Quote →</h5>
+                        </div>
+                        
+                    </div>
+                
+                
             </div>}
 
             {flag && <div className={classes.secondPage}>
@@ -169,10 +191,10 @@ const GetAQuote = () => {
                         >Insurance Details</h2> <br />
                     <h6 className={classes.subheading}>Type of Insurance</h6>
                     <select name="insuranceDetails" id="insuranceDetails" onChange={handleBI}>
-                        <option selected disabled>--Select an option--</option>
+                        <option disabled>--Select an option--</option>
                         <option value="general" >General Insurance</option>
                         <option value="vehicle" >Vehicle Insurance</option>
-                        <option value="business">Business Insurance</option>
+                        <option selected value="business">Business Insurance</option>
                         <option value="personal" >Personal Insurance</option>
                         <option value="health" >Health Insurance</option>
                         <option value="financial" >Financial Insurace</option>
@@ -196,12 +218,12 @@ const GetAQuote = () => {
                         <select name="serviceProvided" id="serviceProvided" 
                         onChange={handleService}
                         >
-                            <option disabled selected value>--Select an option--</option>
-                            <option value="general" >General Liability</option>
+                            <option disabled value>--Select an option--</option>
+                            <option disabled value="general" >General Liability</option>
                             {/* <option value="bpo" >Business Owner's Policy</option> */}
-                            <option value="col" defaultValue>Commercial Property Insurance</option>
-                            <option value="compensation" >Workers' Compensation</option>
-                            <option value="prof" >Professional Liability</option>
+                            <option value="col" selected defaultValue>Commercial Property Insurance</option>
+                            <option disabled value="compensation" >Workers' Compensation</option>
+                            <option disabled value="prof" >Professional Liability</option>
 
                         </select>
                         <br />
@@ -216,6 +238,7 @@ const GetAQuote = () => {
                             <option value="laptopComp" >Laptop / Computer</option>
                             <option value="mobileTablet" >Mobile / Tablet </option>
                             <option value="boat" >Boat </option>
+                            <option value="home" >Home </option>
 
                         </select>
                         <br />
