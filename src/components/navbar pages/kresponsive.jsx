@@ -19,3 +19,5 @@ const Example = () => {
     {isRetina && <p>You are retina</p>}
   </div>
 }
+
+export default Example;
