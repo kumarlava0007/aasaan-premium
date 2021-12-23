@@ -13,6 +13,8 @@ import GetAQuote from "./components/navbar pages/GetAQuote";
 import Claims from "./components/navbar pages/Claims";
 import FindAnAgent from "./components/navbar pages/FindAnAgentTwo";
 import LoginContext from './Context'
+import MyPage from "./components/userPage/MyProfile"
+
 import React from "react";
 import {useState } from "react";
 function App() {
@@ -31,6 +33,7 @@ function App() {
           <Route path="/findAnAgent" component={FindAnAgent}/>
           <Route path="/about" component={About}/>
           <Route path="/login" component={LoginPage}/>
+          <Route path="/myprofile" component={MyPage}/>
           <Switch>
             <Route path="/signup" component={SignUp}/>
             <Route path="/forgotpassword" component={ForgotPass}/>
