@@ -92,6 +92,8 @@
   display: flex;
   margin: 5% 10% 5% 13%;
 }
+
+
 .cards-card {
   /* background-color: #F6F9FE; */
   display: inline-block;
@@ -105,9 +107,7 @@
   cursor: pointer;
   padding: 20px 0 0 0;
 }
-.cards-card:hover{
-  /* transform: scale(1.03); */
-}
+
 .cards-card p {
   font-size: 13px;
   font-weight: bold;
@@ -128,3 +128,10 @@
 } */
 
 
+
+@media screen and (max-width:768px){
+  .firstSection-main-one-first {
+    display: none;
+  }
+  
+}
