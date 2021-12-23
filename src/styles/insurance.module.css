@@ -2,11 +2,11 @@
    margin-top: 100px;
 }
 .container h2{
-    margin-left: 80px;
+    margin-left: 10vw;
 }
 .cards{
     background: #F6F9FE;
-    margin: 40px 30px 40px 30px;
+    margin: 40px 10vw 40px 10vw;
     padding: 30px;
     border-radius: 15px;
 }

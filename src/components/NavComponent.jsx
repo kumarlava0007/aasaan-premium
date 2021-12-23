@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/nav.css';
 import logo from '../images/AasaanPremiumLogo.png';
 import LoginContext from '../Context';
+
 export default function NavComponent() {
     const islogIn=localStorage.getItem("isLoggedIn");
     const isLogged=React.useContext(LoginContext)['isLogged'];
@@ -12,7 +13,8 @@ export default function NavComponent() {
             <div className="containerOne">
                 <div className="boxOne">
                     <div className="first-boxOne">
-                        {isLogged ?                                 <Link to="#"><img src={logo} alt="logo" className="nav-logo"/></Link> :                         <Link to="/"><img src={logo} alt="logo" className="nav-logo"/></Link>}
+                        {isLogged ?                                 
+                        <Link to="#"><img src={logo} alt="logo" className="nav-logo"/></Link> :                         <Link to="/"><img src={logo} alt="logo" className="nav-logo"/></Link>}
                         <div className="navContent">
                             <Link to="/insurance" className="linksOne"><p>Insurance</p></Link>
                             <Link to="/getAQuote" className="linksOne"><p>Get a Quote</p></Link>
@@ -23,8 +25,29 @@ export default function NavComponent() {
                         </div>
                     </div>
                     <div class="second-boxOne">
-                        {isLogged?<Link to="/login"
-                         onClick={()=>setLogged(false)} className="linksTwo"><strong>&emsp;&emsp;LogOut&emsp;&emsp;</strong></Link> : <Link to="/login" className="linksTwo"><strong>&nbsp;LogIn / SignUp&nbsp;</strong></Link>}
+                        {isLogged?
+                            <>
+                                <div className="user_profile">
+                                    <Link to="/myprofile">
+                                        <i class="fas fa-user-circle"></i>
+                                    </Link>
+                                </div>
+                            </>:""}
+
+                        {isLogged?
+                        <Link to="/login"
+                         onClick={()=>setLogged(false)} 
+                         className="linksTwo">
+                             <strong>
+                                 &emsp;&emsp;LogOut&emsp;&emsp;
+                             </strong>
+                        </Link>
+                        : <Link to="/login" 
+                                        className="linksTwo">
+                                            <strong>
+                                                &nbsp;LogIn / SignUp&nbsp;
+                                            </strong>
+                                        </Link>}
                     </div>
                 </div>
             </div>
