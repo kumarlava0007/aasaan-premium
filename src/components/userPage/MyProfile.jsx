@@ -9,7 +9,10 @@ const MyProfile = () => {
     const [data, setdata] = useState({
         mailId : "Loading",
         phone : "Loading",
-        
+        fullAddress: "Loading",
+        pinCode: "Loading",
+        city: "",
+        state: "",
         user:{
             firstName: "Loading",
             lastName : ""
@@ -59,16 +62,16 @@ const MyProfile = () => {
                             <h6>{data.mailId}</h6>
                         </div>
                         <div className={classes.input_data_even}>
-                            <h6>Email Verification</h6>
-                            <h6>Pending</h6>
+                            <h6>Full Address</h6>
+                            <h6>{data.fullAddress + ", "+ data.city+", "+ data.state}</h6>
                         </div>
                         <div className={classes.input_data_odd}>
                             <h6>Contact</h6>
                             <h6>+91-{data.phone}</h6>
                         </div>
                         <div className={classes.input_data_even}>
-                            <h6>Mobile Verification</h6>
-                            <h6>Pending</h6>
+                            <h6>Pin Code</h6>
+                            <h6>{data.pinCode}</h6>
                         </div>
                         <div className={classes.edit}>
                             <i class="far fa-edit"> Edit detail</i>
