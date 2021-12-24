@@ -92,7 +92,7 @@ const GetAQuote = () => {
         if (event.target.value === 'col') {
             count++;
         }
-        if (count === 2) {
+        if(count === 2){
             setDisable(false);
         }
     }
