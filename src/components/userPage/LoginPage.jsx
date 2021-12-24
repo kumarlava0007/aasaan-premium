@@ -5,14 +5,17 @@ import { useState } from 'react';
 import { Domain } from '../../Config';
 import axios from 'axios';
 import LoginContext from '../../Context';
-export default function LoginPage() {
+import { MailIdContext } from '../../Context';
 
+export default function LoginPage() {
+    // console.log(MailIdContext._currentValue)
     const [mailId, setmailId] = useState("");
     const [password, setPassword] = useState("");
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
     const [toggleClass, setToggleClass] = useState(false);
     const [inputs,setInputs]=useState({});
+    const setMail=React.useContext(LoginContext)['mailId'];
     const setLogged=React.useContext(LoginContext)['setLogged'];
     var validEmail = /^[a-zA-z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}/;
     var validPwd =  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]/;
@@ -21,7 +24,7 @@ export default function LoginPage() {
         if(emailError===false && passwordError===false &&
           mailId !== "" && password !== ""
           ){
-              console.log("all false");
+              // console.log("all false");
             setToggleClass(true);
           }
       },[emailError,passwordError, password, mailId])
@@ -68,6 +71,7 @@ export default function LoginPage() {
       .then(response=>{
             localStorage.setItem("isLoggedIn",true)
             setLogged(true)
+            localStorage.setItem("mailId", inputs.mailId);
             alert("seccessfully LoggedIn")
             history.push("/insurance")
       }).catch((error)=>{
