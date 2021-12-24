@@ -23,8 +23,10 @@ export default function SecondSectionComponent() {
                                     <a href="#" class="timeline-content">
                                         <h3 class="title">Provide us your Details</h3>
                                         <p class="description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus
-                                            lorem, et condimentum neque commodo quis.
+                                            Your details are 100% safe and secure with us. 
+                                            First step to get insured is to provide details about you and your background.
+                                            In just 5 minutes you can fill your details and explore the services we provide.
+                                             
                                         </p>
                                     </a>
                                 </div>
@@ -33,8 +35,8 @@ export default function SecondSectionComponent() {
                                     <a href="#" class="timeline-content">
                                         <h3 class="title">Analysing the Information</h3>
                                         <p class="description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus
-                                            lorem, et condimentum neque commodo quis.
+                                            It is our job to keep you in the right direction that's why 
+                                            we analyse your information and helps our customer to find their best interest.
                                         </p>
                                     </a>
                                 </div>
@@ -43,8 +45,8 @@ export default function SecondSectionComponent() {
                                     <a href="#" class="timeline-content">
                                         <h3 class="title">Providing the Best Policy</h3>
                                         <p class="description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus
-                                            lorem, et condimentum neque commodo quis.
+                                        Based on the details we recommend you what is the best offer you can avail 
+                                        and what discounts you may get in your premium amount.
                                         </p>
                                     </a>
                                 </div>
@@ -53,8 +55,7 @@ export default function SecondSectionComponent() {
                                     <a href="#" class="timeline-content">
                                         <h3 class="title">Acceptance by You</h3>
                                         <p class="description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus
-                                            lorem, et condimentum neque commodo quis.
+                                            We respect our customer's decision therefore we accept your feedback on every point and it is your decision to accept or reject the policies we provide on premium amounts.
                                         </p>
                                     </a>
                                 </div>
