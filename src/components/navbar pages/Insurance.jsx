@@ -30,7 +30,6 @@ const Insurance = () => {
     })
     const insurance = InsurancePrevious.map((items)=>{
         return(
-           
                 <tr>
                     <td>{items.srno}</td>
                     <td>{items.policy}</td>
@@ -38,7 +37,6 @@ const Insurance = () => {
                     <td>{items.premium}</td>
                     <td>{items.status}</td>
                 </tr>
-           
         )
     })
     return (
