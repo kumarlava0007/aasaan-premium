@@ -6,7 +6,7 @@ import { Domain } from '../../Config';
 import axios from 'axios';
 import LoginContext from '../../Context';
 import GoogleLogin from 'react-google-login';
-
+import FacebookLogin from "react-facebook-login";
 
 export default function LoginPage() {
 
@@ -17,6 +17,8 @@ export default function LoginPage() {
     const [toggleClass, setToggleClass] = useState(false);
     const [inputs,setInputs]=useState({});
     const setLogged=React.useContext(LoginContext)['setLogged'];
+  const isLogged=React.useContext(LoginContext)['isLogged'];
+
     var validEmail = /^[a-zA-z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}/;
     var validPwd =  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]/;
 
@@ -85,6 +87,17 @@ export default function LoginPage() {
         history.push("/insurance");
 
     }
+    const componentClicked = (data) => console.warn(data);
+    const responseFacebook = (response) => {
+      console.log(response.userID);
+      console.log(response.name);
+      console.log(response.email);
+      
+      console.log(response.picture.data.url);
+      setLogged(true);
+      history.push("/insurance");
+
+    }
     return (
         <div className={Styles.container}>
             <div className={Styles.sectionOne}>
@@ -110,20 +123,40 @@ export default function LoginPage() {
                         <div style={{ fontSize: 14, color: "red" }}>
                             {passwordError}
                         </div>
-                        <GoogleLogin 
-                        clientId="219562657277-594h382ipbvrsq4ainfq76pgb3qfea97.apps.googleusercontent.com"
-                        buttonText="Sign in"
-                        onSuccess={responseGoogle}
-                        onFailure={responseGoogle}
-                        cookiePolicy={'single_host_origin'}
-                        />
+                        
                         <button className={Styles.buttonOne} type="submit">Log In</button>
                         <Link className={Styles.forgPass} to="/forgotpassword">Forgotten Password</Link>
                         <hr className={Styles.hr}/>
                         <Link to="/signUp"><button className={Styles.buttonTwo}>Create New Account</button></Link>
+                        <hr className={Styles.hr}/>
+                        <p style={{color: "lightgray", marginBottom: "-20px"}}>or SignIn with</p>
+                        <div className={Styles.signinwith}>
+                          {!isLogged ? <GoogleLogin 
+                          clientId="219562657277-594h382ipbvrsq4ainfq76pgb3qfea97.apps.googleusercontent.com"
+                          buttonText="Google"
+                          onSuccess={responseGoogle}
+                          onFailure={responseGoogle}
+                          cookiePolicy={'single_host_origin'}
+                          />:""}
+
+                          {!isLogged ? 
+                          <FacebookLogin
+                          appId="947167922881921"
+                          autoLoad={true}
+                          fields="name,email,picture"
+                          onClick={componentClicked}
+                          callback={responseFacebook}
+                          version="3.1"
+                          textButton={<span> Facebook</span>}
+                          icon="fa-facebook"
+                          cssClass="my-facebook-button"
+                        />:""}
+                        </div>
+                        
                     </form>
                 </div>
             </div>
         </div>
     )
 }
+
