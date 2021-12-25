@@ -7,6 +7,7 @@ import axios from 'axios';
 import LoginContext from '../../Context';
 import GoogleLogin from 'react-google-login';
 
+
 export default function LoginPage() {
 
     const [mailId, setmailId] = useState("");
@@ -80,6 +81,9 @@ export default function LoginPage() {
     const responseGoogle = (response) => {
         console.log(response);
         console.log(response.profileObj);
+        setLogged(true);
+        history.push("/insurance");
+
     }
     return (
         <div className={Styles.container}>
@@ -112,7 +116,7 @@ export default function LoginPage() {
                         onSuccess={responseGoogle}
                         onFailure={responseGoogle}
                         cookiePolicy={'single_host_origin'}
-                        className={Styles.google}/>
+                        />
                         <button className={Styles.buttonOne} type="submit">Log In</button>
                         <Link className={Styles.forgPass} to="/forgotpassword">Forgotten Password</Link>
                         <hr className={Styles.hr}/>
