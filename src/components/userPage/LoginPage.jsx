@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { Domain } from '../../Config';
 import axios from 'axios';
 import LoginContext from '../../Context';
+import GoogleLogin from 'react-google-login';
+
 export default function LoginPage() {
 
     const [mailId, setmailId] = useState("");
@@ -74,6 +76,11 @@ export default function LoginPage() {
             alert("wrong credentials")
       })
         }
+
+    const responseGoogle = (response) => {
+        console.log(response);
+        console.log(response.profileObj);
+    }
     return (
         <div className={Styles.container}>
             <div className={Styles.sectionOne}>
@@ -99,6 +106,13 @@ export default function LoginPage() {
                         <div style={{ fontSize: 14, color: "red" }}>
                             {passwordError}
                         </div>
+                        <GoogleLogin 
+                        clientId="219562657277-594h382ipbvrsq4ainfq76pgb3qfea97.apps.googleusercontent.com"
+                        buttonText="Sign in"
+                        onSuccess={responseGoogle}
+                        onFailure={responseGoogle}
+                        cookiePolicy={'single_host_origin'}
+                        className={Styles.google}/>
                         <button className={Styles.buttonOne} type="submit">Log In</button>
                         <Link className={Styles.forgPass} to="/forgotpassword">Forgotten Password</Link>
                         <hr className={Styles.hr}/>
