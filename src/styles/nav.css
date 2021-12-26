@@ -116,7 +116,7 @@
 
 
 .hamLinks p:hover{ 
-    width: 15%;
+    width: 20%;
     border-bottom: turquoise;
 }
 
@@ -133,6 +133,13 @@
     justify-content: space-between;
     align-items: center;
 }
+.hamLogin{
+    position: relative;
+    display: flex;
+    left: 14px;
+}
+
+
 
 @media screen and (min-width: 768px) {
     .hamburger {

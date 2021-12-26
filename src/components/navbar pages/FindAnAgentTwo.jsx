@@ -1,7 +1,23 @@
 import React, {useState} from 'react'
+import Chatbot from "react-chatbot-kit";
+import 'react-chatbot-kit/build/main.css'
+import config from "../../chatbot_config.js";
+import MessageParser from "../../MessageParser.js";
+import ActionProvider from "../../ActionProvider";
+
 import Styles from '../../styles/findAndAgent.module.css'
 import style from 'styled-components'
 let address=[
+    {
+        "pincode":144001,
+        "nearloc":"Aasan Premium Punjab, Near Bus Stand, Jalandhar City.",
+        "dist":"Punjab-144001"
+    },
+    {
+        "pincode":160003,
+        "nearloc":"Aasan Premium Chandigarh, Near Bus Stand, Chandigarh",
+        "dist":"Chandigarh-160003"
+    },
     {
         "pincode":800020,
         "nearloc":"Aasan Premium Frazer Road,Hariniwash Complex",
@@ -141,16 +157,23 @@ export default function FindAnAgentTwo() {
                     <br /><br />
                     <div className={Styles.cardSection}>
                         <div className={Styles.cards}>
-                            <a href="mailto:swamisonamkumarsingh576@gmail.com"><i class="fa fa-envelope-o fa-4x" aria-hidden="true" style={{ color: "#5b4cfa" }}></i></a>
+                            <a href="mailto:help@aasaanpremium.com"><i class="fa fa-envelope-o fa-4x" aria-hidden="true" style={{ color: "#5b4cfa" }}></i></a>
                             <h6>Mail us</h6>
                         </div>
                         <div className={Styles.cards}>
                             <i class="fa fa-volume-control-phone fa-4x" aria-hidden="true" style={{ color: "#5b4cfa" }}></i>
-                            <h6>9982732898</h6>
+                            <h6>1800-help-0870</h6>
                         </div>
                         <div className={Styles.cards}>
                             <i class="fa fa-comments-o fa-4x" aria-hidden="true" style={{ color: "#5b4cfa" }}></i>
                             <h6>Chat</h6>
+                        </div>
+                        <div>
+                        {/* <Chatbot
+                            config={config}
+                            messageParser={MessageParser}
+                            actionProvider={ActionProvider}
+                                 /> */}
                         </div>
                     </div>
                 </div>

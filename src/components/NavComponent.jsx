@@ -33,6 +33,8 @@ export default function NavComponent() {
                         <Link to="/claims" ><p onClick={() => setOpen(!open)}>Claims</p></Link>
                         <Link to="/findAnAgent" ><p onClick={() => setOpen(!open)}>Find an Agent</p></Link>
                         <Link to="/about" ><p onClick={() => setOpen(!open)}>About</p></Link>
+                        {isLogged?<Link to="/login">
+                            <p onClick={()=>setLogged(false)}>LogOut</p></Link> : <Link to="/login"><p>LogIn / SignUp</p></Link>}
                     </div>
 
     const hamOpenIcon = <div className='hamButton'>  
@@ -50,6 +52,7 @@ export default function NavComponent() {
             <div className="hamburger" color='white'>    
                 { open ? hamCloseIcon : hamOpenIcon}           
                 { open && hamLinks}   
+                       
                 <div className="hamburgerContent">     
                 </div>
             </div>
