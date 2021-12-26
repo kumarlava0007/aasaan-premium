@@ -1,0 +1,60 @@
+.profile_page{
+    background: white;
+    margin-top: 100px;
+    margin-left: 10vw;
+}
+.profile_page hr{
+    width: 80vw;
+}
+.profile_page .profile_nav{
+    display: flex;
+}
+.profile_page .main_box{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+}
+.profile_page .profile_box{
+    background: #F6F9FE;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+}
+.main_box .profile_box .input_left div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.profile_box .input_left i{
+    font-size: 100px;
+    color: #342f69;
+    margin: 100px 0vw 0vh 100px;
+}
+.main_box .profile_box .input_data_odd, .main_box .profile_box .input_data_even{
+    width: 35vw;
+    margin-left: 5vw;
+    padding: 10px 15px 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+.main_box .profile_box .input_data_odd{
+    background:#ebf2ff; 
+}
+.main_box .profile_box .input_data_even{
+    /* background: rgb(238, 238, 238); */
+}
+.main_box .profile_box .input_right{
+    margin-top: 10vh;
+}
+.main_box .profile_box .input_right .edit{
+    color: #28509b; 
+    float: right;
+    padding: 20px 50px 0 0;
+    cursor: pointer;
+}

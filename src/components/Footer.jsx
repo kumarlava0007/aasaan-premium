@@ -32,10 +32,6 @@ export default function Footer() {
                                 <span>  Health Insurance</span>
                             </div>
                         </div>
-                    </div>
-                    <br />
-                    <br />
-                    <div className={Styles.footerPath}>
                         <div className={Styles.insuranceList}>
                             <div className={Styles.lists}>
                                 <i class="fas fa-network-wired fa-2x"></i>

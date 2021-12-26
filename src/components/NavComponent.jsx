@@ -48,35 +48,57 @@ export default function NavComponent() {
     
     return (
         <>
-        <div className='showHide'>
-            <div className="hamburger" color='white'>    
-                { open ? hamCloseIcon : hamOpenIcon}           
-                { open && hamLinks}   
-                       
-                <div className="hamburgerContent">     
+            <div className='showHide'>
+                <div className="hamburger" color='white'>    
+                    { open ? hamCloseIcon : hamOpenIcon}           
+                    { open && hamLinks}              
                 </div>
-            </div>
-
+                </div>
+            
             <div className="containerOne">
                 <div className="boxOne">
-                        <div className="first-boxOne">
-                            {isLogged ? <Link to="#"><img src={logo} alt="logo" className="nav-logo"/></Link> : <Link to="/"><img src={logo} alt="logo" className="nav-logo"/></Link>}
-                            <div className="navContent">
-                                <Link to="/insurance" className="linksOne"><p>Insurance</p></Link>
-                                <Link to="/getAQuote" className="linksOne"><p>Get a Quote</p></Link>
-                                <Link to="/payabill" className="linksOne"><p>Pay a Bill</p></Link>
-                                <Link to="/claims" className="linksOne"><p>Claims</p></Link>
-                                <Link to="/findAnAgent" className="linksOne"><p>Find an Agent</p></Link>
-                                <Link to="/about" className="linksOne"><p>About</p></Link>
-                            </div>
+                    <div className="first-boxOne">
+                        {isLogged ?                                 
+                        <Link to="#"><img src={logo} alt="logo" className="nav-logo"/></Link> 
+                        :
+                        <Link to="/"><img src={logo} alt="logo" className="nav-logo"/></Link>}
+                        <div className="navContent">
+                            <Link to="/insurance" className="linksOne"><p>Insurance</p></Link>
+                            <Link to="/getAQuote" className="linksOne"><p>Get a Quote</p></Link>
+                            <Link to="/payabill" className="linksOne"><p>Pay a Bill</p></Link>
+                            <Link to="/claims" className="linksOne"><p>Claims</p></Link>
+                            <Link to="/findAnAgent" className="linksOne"><p>Find an Agent</p></Link>
+                            <Link to="/about" className="linksOne"><p>About</p></Link>
+                            
                         </div>
-                        <div class="second-boxOne">
-                            {isLogged?<Link to="/login"
-                            onClick={()=>setLogged(false)} className="linksTwo"><strong>&emsp;&emsp;LogOut&emsp;&emsp;</strong></Link> : <Link to="/login" className="linksTwo"><strong>&nbsp;LogIn / SignUp&nbsp;</strong></Link>}
-                        </div>
-                   </div>
+                    </div>
+                    <div class="second-boxOne">
+                        {isLogged?
+                            <>
+                                <div className="user_profile">
+                                    <Link to="/myprofile">
+                                        <i class="fas fa-user-circle"></i>
+                                    </Link>
+                                </div>
+                            </>:""}
+
+                        {isLogged?
+                        <Link to="/login"
+                         onClick={()=>{setLogged(false);localStorage.setItem('mailId', null)}}
+                         className="linksTwo">
+                             <strong>
+                                 &emsp;&emsp;LogOut&emsp;&emsp;
+                             </strong>
+                        </Link>
+                        : <Link to="/login" 
+                                        className="linksTwo">
+                                            <strong>
+                                                &nbsp;LogIn / SignUp&nbsp;
+                                            </strong>
+                                        </Link>}
+                    </div>
                 </div>
             </div>                
-        </>
+            </>
     )
 }

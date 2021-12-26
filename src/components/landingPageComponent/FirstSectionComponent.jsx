@@ -10,8 +10,8 @@ export default function FirstSectionComponent() {
         return(
             <div className="cards-card">
                 <i class={item.class}></i>
-                <p>{item.p1}</p>
-                <p>{item.p2}</p>
+                <p style={{paddingTop: "10px"}}>{item.p1}</p>
+                <p style={{marginTop: "-10px"}}>{item.p2}</p>
             </div>           
         )
     })

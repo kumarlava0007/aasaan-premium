@@ -147,8 +147,8 @@
     }
 }
 
-/* @media all and (min-width: 768px) and (min-height: 1024px){
-    .hamburger {
-        display: flex;
-    }   
-} */
+.second-boxOne .user_profile i{
+    padding: 10px;
+    font-size: 35px;
+    color: #5b4cfa;
+}

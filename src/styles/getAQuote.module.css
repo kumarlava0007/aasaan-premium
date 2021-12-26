@@ -7,21 +7,41 @@
     align-items: center;
     align-content: center;
 }
+.contentStart .outerDiv{
+    margin-top: -350px;
+    margin-left: -500px;
+}
+.contentStart .outerDiv .paraContent{
+    display: flex;
+    justify-content: space-between;
+}
+.contentStart .outerDiv ul{
+    list-style: none;
+}
+.contentStart .outerDiv ul li:before {
+    content: '✓';
+  }
+.contentStart .outerDiv .heading{
+    margin-top: 100px;
+    text-align: left;
+    color: black;
+}
+.contentStart .outerDiv .heading h5{
+    margin-left: 80px;
+}
 .getAQuote {
-    padding: 10px;
     cursor: pointer;
-    border-radius: 30px;
     background-color: #5b4cfa;
-    color: white;
+    height: 45px;
+    border-radius: 30px;
     border: none;
-    width: 350px;
+    width: 200px;
     display: flex;
     justify-content: center;
-    flex-flow: column;
     align-items: center;
-    align-content: center;
-    font-size: xx-small;
-    margin: 45vh 30%;
+}
+.getAQuote h5{
+    color: white;
 }
 .getAQuote:hover{
     cursor: pointer;
@@ -46,7 +66,8 @@
     background: white;
     padding: 20px;
     width: 450px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: 60px -100px 0px 100px;
 }
 .heading{
@@ -78,7 +99,8 @@
     padding: 20px;
     width: 450px;
     margin: 60px -100px 0px 100px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .details input{
     width: 70%;
@@ -114,7 +136,8 @@
     padding: 20px;
     width: 450px;
     margin: 60px -100px 0px 100px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .personalInfo input{
     margin: 5px 10px;
@@ -139,7 +162,8 @@
     padding: 20px;
     width: 450px;
     margin: 60px -100px 0px 100px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .assetDetails input, .assetDetails select{
     border: 1px solid gray;
@@ -159,7 +183,8 @@
     padding: 20px;
     width: 450px;
     margin: 60px -100px 0px 100px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .premium > .innerDiv h1{
     text-align: center;
