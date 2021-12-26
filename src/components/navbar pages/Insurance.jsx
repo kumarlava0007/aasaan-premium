@@ -5,15 +5,72 @@ import {InsuranceData} from './InsuranceData';
 import LoginContext from '../../Context';
 import { Link } from 'react-router-dom';
 import { InsurancePrevious } from './InsurancePrevious';
+import { Domain } from '../../Config';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 
 const Insurance = () => {
     const isLogged=React.useContext(LoginContext)['isLogged'];
+    const [data, setdata] = useState([])
+    const [element, setElement] = useState(<></>);
 
     const history = useHistory();
     const handleBuyBtn = () => {
         history.push('getAQuote');
     }
+
+    useEffect((e) => {
+        const REGISTER_URL=Domain+"/allMyPolicies/"+ localStorage.getItem('mailId');
+        axios
+      .get(REGISTER_URL)
+      .then(response=>{
+            console.log(response.data);
+            setdata(response.data)
+      }).catch((error)=>{
+            console.log(error)
+      })
+      
+      const insurance  = data.map((items, index)=>{
+        return(
+                <tr>
+                    <td>{index + 1}</td>
+                    <td>{items.policyNo}</td>
+                    <td>{items.assetName}</td>
+                    <td>{items.premiumAmount}</td>
+                    <td>{items.status}</td>
+                </tr>
+        )
+    })
+    setElement(insurance);
+    }, [localStorage.getItem('isLoggedIn')])
+
+    const handleShow = async(e) => {
+        e.preventDefault();
+        const REGISTER_URL=Domain+"/allMyPolicies/"+ localStorage.getItem('mailId');
+      await axios
+      .get(REGISTER_URL)
+      .then(response=>{
+            console.log(response.data);
+            setdata(response.data)
+      }).catch((error)=>{
+            console.log(error)
+      })
+      
+      const insurance  = data.map((items, index)=>{
+        return(
+                <tr>
+                    <td>{index + 1}</td>
+                    <td>{items.policyNo}</td>
+                    <td>{items.assetName}</td>
+                    <td>{items.premiumAmount}</td>
+                    <td>{items.status}</td>
+                </tr>
+        )
+    })
+    setElement(insurance);
+    }
+
     const cards = InsuranceData.map((item)=>{
         return(
             <div className={classes.cards}>
@@ -28,17 +85,7 @@ const Insurance = () => {
             </div>           
         )
     })
-    const insurance = InsurancePrevious.map((items)=>{
-        return(
-                <tr>
-                    <td>{items.srno}</td>
-                    <td>{items.policy}</td>
-                    <td>{items.asset}</td>
-                    <td>{items.premium}</td>
-                    <td>{items.status}</td>
-                </tr>
-        )
-    })
+    
     return (
         <div className={classes.container}>
             <h2>Get Insured easily with us</h2>  
@@ -60,8 +107,10 @@ const Insurance = () => {
                         <th>Premium Amount</th>
                         <th>Status</th>
                     </tr>
-                    {insurance}
+                    
+                    {element}
                 </table>
+                <button onClick={handleShow}>Refresh</button>
                 </>
 
                 }

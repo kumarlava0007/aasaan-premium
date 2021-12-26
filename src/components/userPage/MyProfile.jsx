@@ -2,7 +2,8 @@ import axios from 'axios';
 import React from 'react'
 import classes from '../../styles/myprofile.module.css';
 import { Domain } from '../../Config';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 
 const MyProfile = () => {
 
@@ -18,7 +19,7 @@ const MyProfile = () => {
             lastName : ""
         }
     })
-    const profileDetails = async() => {
+    useEffect(async() => {
         const REGISTER_URL = Domain + "/myprofile/"+localStorage.getItem('mailId');
         await axios
       .get(REGISTER_URL)
@@ -28,8 +29,8 @@ const MyProfile = () => {
       }).catch((error)=>{
             console.log(error)
       })
-
-    }
+    }, [localStorage.getItem('isLoggedIn')])
+    
     return (
         <div className={classes.profile_page}>
             <h3>My Profile</h3>
@@ -76,7 +77,6 @@ const MyProfile = () => {
                         <div className={classes.edit}>
                             <i class="far fa-edit"> Edit detail</i>
                         </div>
-                        <button onClick={profileDetails}>View Your Details</button>
                     </div>
                     
                 </div>

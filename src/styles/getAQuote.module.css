@@ -66,7 +66,8 @@
     background: white;
     padding: 20px;
     width: 450px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: 60px -100px 0px 100px;
 }
 .heading{
@@ -98,7 +99,8 @@
     padding: 20px;
     width: 450px;
     margin: 60px -100px 0px 100px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .details input{
     width: 70%;
@@ -134,7 +136,8 @@
     padding: 20px;
     width: 450px;
     margin: 60px -100px 0px 100px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .personalInfo input{
     margin: 5px 10px;
@@ -159,7 +162,8 @@
     padding: 20px;
     width: 450px;
     margin: 60px -100px 0px 100px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .assetDetails input, .assetDetails select{
     border: 1px solid gray;
@@ -179,7 +183,8 @@
     padding: 20px;
     width: 450px;
     margin: 60px -100px 0px 100px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;   
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .premium > .innerDiv h1{
     text-align: center;

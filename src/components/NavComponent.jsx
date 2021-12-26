@@ -39,7 +39,7 @@ export default function NavComponent() {
 
                         {isLogged?
                         <Link to="/login"
-                         onClick={()=>setLogged(false)} 
+                         onClick={()=>{setLogged(false);localStorage.setItem('mailId', null)}}
                          className="linksTwo">
                              <strong>
                                  &emsp;&emsp;LogOut&emsp;&emsp;

@@ -36,15 +36,23 @@ const GetAQuote = () => {
 
     const handleBuyBtn = async(e) => {
         e.preventDefault();
-        const REGISTER_URL = Domain + "/getAQuote";
+        let REGISTER_URL = Domain + "/getAQuote";
         await axios
             .post(REGISTER_URL, inputs)
             .then(response => {
                 console.log(response)
-                history.push("/insurance")
             }).catch((error) => {
                 console.log(error)
             })
+        REGISTER_URL = Domain + "/addPolicy"
+        await axios
+        .post(REGISTER_URL, inputs)
+        .then(response => {
+            console.log(response)
+            history.push("/insurance")
+        }).catch((error) => {
+            console.log(error)
+        })
     }
 
     const handleHead = () => {
@@ -135,17 +143,68 @@ const GetAQuote = () => {
 
     }
 
+    const [amount, setamount] = useState(0)
+    const [deduct, setdeduct] = useState(0)
     const handlebtn4 = () => {
         setFlagFive(false);
         setFlagSix(true);
         console.log(inputs, "inpurtscsvdhg");
+        let value = inputs.purchaseValue;
+        console.log(value);
+        // <option value="lessThan10" >Less than 10,000</option>
+        //                             <option value="10To25" >10,000 - 25,000</option>
+        //                             <option value="25To50" >25,000 - 50,000</option>
+        //                             <option value="50To80" >50,000 - 80,000 </option>
+        //                             <option value="80To1Lakh" >80,000 - 1,00,000</option>
+        //                             <option value="above1Lakh" >Greater Than 1,00,000</option>
+        let val = "0";
+        switch (value){
+            case "lessThan10": {
+                setamount(2500)
+                val = "2500";
+                setdeduct(250)
+                break;
+            }
+            case "10To25": {
+                setamount(4000)
+                val = "4000";
+                setdeduct(400)
+                break;
+            }
+            case "25To50": {
+                setamount(8000);
+                val = "8000";
+                setdeduct(800)
+                break;
+            }
+            case "50To80": {
+                setamount(12000)
+                val = "12000";
+                setdeduct(1200)
+                break;
+            }
+            case "80To1Lakh": {
+                setamount(15000)
+                val = "15000"
+                setdeduct(1500)
+                break;
+            }
+            case "above1Lakh": {
+                setamount(18800)
+                val = "18800";
+                setdeduct(1880)
+                break;
+            }
+        }
+        const name = "premiumAmount";
+        setinputs(values => ({...values, [name]: val}))
+        
     }
 
     const premiumYearly = () => {
         setFlagYearly(true);
         setFlagMonthly(false);
     }
-
     const premiumMonthly = () => {
         setFlagYearly(false);
         setFlagMonthly(true);
@@ -226,7 +285,7 @@ const GetAQuote = () => {
                             <h2
                                 className={classes.heading}
                             >Insurance Details</h2> <br />
-                            <h6 className={classes.subheading}>Type of Insurance</h6>
+                            <h6 className={classes.subheading}><strong>Type of Insurance</strong></h6>
                             <select name="typesOfInsurance" id="typesOfInsurance" onChange={handleChange}>
                                 <option selected>--Select an option--</option>
                                 <option value="general" >General Insurance</option>
@@ -250,7 +309,7 @@ const GetAQuote = () => {
                             }
                             {flagTwo &&
                                 <>
-                                    <h6 className={classes.subheading}>Protection Options</h6>
+                                    <h6 className={classes.subheading}><strong>Protection Options</strong></h6>
 
                                     <select name="protectionOption" id="protectionOption" onChange={handleChange}
                                     >
@@ -279,7 +338,7 @@ const GetAQuote = () => {
                                         <br /> */}
 
 
-                                    <h6 className={classes.subheading}>Cause of Risks</h6>
+                                    <h6 className={classes.subheading}><strong>Cause of Risks</strong></h6>
                                     <select name="causeOfRisks" id="causeOfRisks" onChange={handleChange}
                                     >
                                         <option disabled selected value>--Select an option--</option>
@@ -320,15 +379,13 @@ const GetAQuote = () => {
 
                             </div>
                             <div className={classes.innerDiv}>
-                                {/* <label htmlFor="fname">First Name: </label> */}
-                                <input autoComplete="off" type="text" name="fname" id="fname" placeholder="First Name" required onChange={handleChange} />
-                                {/* <label htmlFor="lname">Last Name: </label> */}
-                                <input autoComplete="off" type="text" name="lname" id="lname" placeholder="Last Name" required onChange={handleChange} />
+                                
                             </div>
 
                             <div className={classes.innerDiv}>
-                                <input autoComplete="off" type="email" name="mailId" id="mailId" placeholder="Email address" required onChange={handleChange} />
-                                <input autoComplete="off" type="number" name="phone" id="phone" placeholder="Phone number " required onChange={handleChange} />
+                                <input autoComplete="off" type="text" name="aadharNo" id="aadharNo" placeholder="AadharNo" required onChange={handleChange} style={{width: "400px"}}/>
+                                <br />
+                                <input autoComplete="off" type="number" name="phone" id="phone" placeholder="Phone number " required onChange={handleChange} style={{width: "400px"}} />
                             </div>
 
 
@@ -349,12 +406,12 @@ const GetAQuote = () => {
 
                             <div>
                                 <div className={classes.innerDiv}>
-                                    <input type="textarea" name="fullAddress" id="fullAddress" placeholder="Full Address" required onChange={handleChange} />
+                                    <input type="textarea" name="fullAddress" id="fullAddress" placeholder="House-No" required onChange={handleChange} style={{width: "400px"}} />
                                 </div>
 
                                 <div className={classes.innerDiv}>
-                                    <input type="text" name="city" id="city" placeholder="City" onChange={handleChange} />
-                                    <input type="text" name="state" id="state" placeholder="State/Province" onChange={handleChange} />
+                                    <input type="text" name="city" id="city" placeholder="City" onChange={handleChange} style={{width: "190px"}} />
+                                    <input type="text" name="state" id="state" placeholder="State/Province" onChange={handleChange} style={{width: "190px"}}/>
                                 </div>
                             </div>
 
@@ -505,10 +562,11 @@ const GetAQuote = () => {
 
                             {flagYearly && <div className={classes.innerDiv}>
                                 <div className={classes.innerHeading}>
-                                    <h3>₹ 10,800/year </h3><h5>₹ 12,000/year</h5>
+                                    <h3>₹ {amount}/year </h3>
+                                    {/* <h5>₹ 12,000/year</h5> */}
                                 </div>
 
-                                <h4 style={{ textAlign: "center" }}>with Deductible of ₹1500</h4>
+                                <h4 style={{ textAlign: "center" }}>with Deductible of ₹{deduct}</h4>
                                 <div className={classes.divButton}>
                                     <button className={classes.backButton} onClick={handleBackbutton}>Back</button>
                                     <button className={classes.buyBtn} onClick={handleBuyBtn}>Buy Plan</button>
