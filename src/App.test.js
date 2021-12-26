@@ -1,3 +1,5 @@
+import { Context as ResponsiveContext } from 'react-responsive'
+import { renderToString } from 'react-dom/server'
 import { render, screen } from '@testing-library/react';
 import App from './App';
 

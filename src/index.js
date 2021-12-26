@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Chatbot from "react-chatbot-kit";
 ReactDOM.render(
   <React.StrictMode>
     <App />
