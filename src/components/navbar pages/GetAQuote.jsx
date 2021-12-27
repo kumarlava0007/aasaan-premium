@@ -249,7 +249,7 @@ const GetAQuote = () => {
                     <div className={classes.outerDiv}>
                         <h2 className={classes.heading}>Get promising insurance with just few clicks </h2>
                         <br />
-                        <div>
+                        <div className={classes.para}>
                             <h5>Aasaan Premium provides premium on every product you need in</h5>
                             <h5> just 5 minutes</h5>
                             <br />

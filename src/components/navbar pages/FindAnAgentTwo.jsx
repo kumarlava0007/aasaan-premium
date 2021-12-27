@@ -107,7 +107,13 @@ let address=[
         "pincode":500018,
         "nearloc":"Aasan Premium Neckless Road",
         "dist":"Telangana-500018"
+    },
+    {
+        "pincode":811312,
+        "nearloc":"Aasan Premium Station Road",
+        "dist":"Jamui-811312"
     }
+    
 ];
 export default function FindAnAgentTwo() {
     const [add,changeadd]=useState([]);
