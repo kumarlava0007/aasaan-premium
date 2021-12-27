@@ -80,3 +80,8 @@
     border: 1px solid black;
     padding: 5px;
   }
+
+  .showPolicy{
+      width: 200px;
+      margin-left: 30vw;
+  }

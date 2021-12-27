@@ -1,6 +1,8 @@
 import React from 'react'
 import style from 'styled-components'
 const FindAnAgent = () => {
+
+
     return (
         <Master>
             <Main>We Are Here To Solve Your Queries.</Main>
@@ -8,6 +10,7 @@ const FindAnAgent = () => {
             <Zipcode>
                 <input type="text" required placeholder="______" maxLength="6"></input>
                 <button>Find an agent</button>
+                
             </Zipcode>
             <br /><br /><br />
             <hr />
