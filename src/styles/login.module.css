@@ -99,3 +99,18 @@
 .btn:focus, .deactivate:focus{
     outline: none;
 }
+
+.signinwith{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.signinwith button{
+    width: 150px;
+    height: 50px;
+    border-radius: 0%;
+    box-shadow:rgb(0 0 0 / 24%) 0px 2px 2px 0px;
+    background-color: transparent;
+    color: #5b4cfa;
+    margin: 40px 10px 10px 10px;
+}

@@ -7,153 +7,58 @@ import ActionProvider from "../../ActionProvider";
 
 import Styles from '../../styles/findAndAgent.module.css'
 import style from 'styled-components'
-let address=[
-    {
-        "pincode":144001,
-        "nearloc":"Aasan Premium Punjab, Near Bus Stand, Jalandhar City.",
-        "dist":"Punjab-144001"
-    },
-    {
-        "pincode":160003,
-        "nearloc":"Aasan Premium Chandigarh, Near Bus Stand, Chandigarh",
-        "dist":"Chandigarh-160003"
-    },
-    {
-        "pincode":800020,
-        "nearloc":"Aasan Premium Frazer Road,Hariniwash Complex",
-        "dist":"Bihar-800002"
-    },
-    {
-        "pincode":800020,
-        "nearloc":"Aasan Premium Kanakarbagh, Near Kendriye Vidyalay Gate No.-2",
-        "dist":"Bihar-800020"
-    },
-    {
-        "pincode":800020,
-        "nearloc":"Aasan Premium Kanti Factory Road",
-        "dist":"Bihar-800020"
-    },
-    {
-        "pincode":800020,
-        "nearloc":"Aasan Premium Hanuman Nagar",
-        "dist":"Bihar-800020"
-    },
-    {
-        "pincode":800020,
-        "nearloc":"Aasan Premium Hanuman Nagar",
-        "dist":"Bihar-800020"
-    },
-    {
-        "pincode":803110,
-        "nearloc":"Aasan Premium BiharSharif,Near Ramchandar Pur Bus Stop",
-        "dist":"Bihar-803110"
-    },
-    {
-        "pincode":803110,
-        "nearloc":"Aasan Premium Harnaut,Station Road",
-        "dist":"Bihar-803110"
-    },
-    {
-        "pincode":803110,
-        "nearloc":"Aasan Premium Rajgir",
-        "dist":"Bihar-803110"
-    },
-    {
-        "pincode":803110,
-        "nearloc":"Aasan Premium Silao",
-        "dist":"Bihar-803110"
-    },
-    {
-        "pincode":151001,
-        "nearloc":"Aasan Premium Bathinda,Court Road",
-        "dist":"Punjab-151001"
-    },
-    {
-        "pincode":151001,
-        "nearloc":"Aasan Premium Faridkot",
-        "dist":"Punjab-151001"
-    },
-    {
-        "pincode":151001,
-        "nearloc":"Aasan Premium BhuchoMandi, Bathinda",
-        "dist":"Punjab-151001"
-    },
-    {
-        "pincode":151001,
-        "nearloc":"Aasan Premium Mittal Mall",
-        "dist":"Punjab-151001"
-    },
-    {
-        "pincode":500016,
-        "nearloc":"Aasan Premium Ameerpet, Near Reliance Fresh",
-        "dist":"Telengana-500016"
-    },
-    {
-        "pincode":500016,
-        "nearloc":"Aasan Premium Begumpet",
-        "dist":"Telangana-500016"
-    },
-    {
-        "pincode":500038,
-        "nearloc":"Aasan Premium Panjagutta",
-        "dist":"Telangana-500038"
-    },
-    {
-        "pincode":500016,
-        "nearloc":"Aasan Premium Ameerpet, Near Yellama Pochama Devasthanam",
-        "dist":"Telangana-500016"
-    },
-    {
-        "pincode":500018,
-        "nearloc":"Aasan Premium Neckless Road",
-        "dist":"Telangana-500018"
-    },
-    {
-        "pincode":811312,
-        "nearloc":"Aasan Premium Station Road",
-        "dist":"Jamui-811312"
-    }
-    
-];
+import axios from 'axios';
+
 export default function FindAnAgentTwo() {
+
+    const [pinCode, setpinCode] = useState("");
     const [add,changeadd]=useState([]);
-    function findAgent(){
-        setTimeout(()=>{
-             // console.log("button clicked")
-        let pin=document.getElementById("pincode").value;
-        // let nearestlocation=document.getElementById("nearestloc");
-        // console.log(pin);
-        let add1=address.filter((e)=>{
-            if(pin==e.pincode)
-            return<>
-            {/* <div className='address'>
-                <h2>{e.nearloc}</h2>
-            </div> */}
-            </>
+    const [addComp, setaddComp] = useState(<></>);
+
+    const findOffices = (e) => {
+        const REGISTER_URL = `https://api.postalpincode.in/pincode/${pinCode}`;
+        e.preventDefault();
+        axios
+        .get(REGISTER_URL)
+        .then((response => {
+        console.log(response.data);
+        changeadd(response.data[0].PostOffice)
+        console.log(add)
+        }))
+        .catch((error) => {
+            console.log(error)
         })
-        changeadd(add1)
-        },1000)
-       
+        addComponent(add)
+    }
+
+    const addComponent = (add1) =>{
+        setaddComp(
+            add1.map((e)=>{
+                return<>
+                <Address>
+                <Location>{e.Name}</Location>
+                <h3>{e.Pincode}</h3>
+                <District>{e.Region +", "+ e.State}</District>
+                </Address>
+                </>
+            }
+        )
+        )
     }
     return (
         <div className={Styles.mainContainer}>
             <div className={Styles.containerOne}>
                 <h3><strong>Find an Agent</strong></h3>
                 <br />
-                <input type="text" required placeholder="______" maxLength="6" className={Styles.inputs} id="pincode"></input>
-                <button className={Styles.buttons} onClick={findAgent}>Find an agent</button>
+                <h5>Enter Pin Code</h5>
+                <input type="text" required placeholder="______" maxLength="6" className={Styles.inputs} id="pincode" onChange={(e)=> setpinCode(e.target.value)}></input>
+                <button className={Styles.buttons} onClick={findOffices}>Find an agent</button>
+                
             </div>
             <br />
             <br />
             <AddressHead> 
-                {add.map((e)=>{
-                    return<>
-                    <Address>
-                    <Location>{e.nearloc}</Location>
-                    <District>{e.dist}</District>
-                    </Address>
-                    </>
-            })}
+                {addComp}
             </AddressHead>
             <br />
             <div className={Styles.mainContainerTwo}>
@@ -194,7 +99,7 @@ flex-wrap:wrap;
 `
 const Address=style.div`
 background-color:#F6F9FD;
-height:100px;
+height:150px;
 width:340px;
 padding:10px 20px;
 margin-bottom:20px;
