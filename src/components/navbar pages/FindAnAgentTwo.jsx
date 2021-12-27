@@ -1,10 +1,9 @@
-import React, {useState} from 'react'
-import Chatbot from "react-chatbot-kit";
+import React, {useState,View, Button, Text, Modal} from 'react'
+// import Chatbot from "react-chatbot-kit";
 import 'react-chatbot-kit/build/main.css'
-import config from "../../chatbot_config.js";
-import MessageParser from "../../MessageParser.js";
-import ActionProvider from "../../ActionProvider";
-
+// import config from "../../chatbot_config.js";
+// import MessageParser from "../../MessageParser.js";
+// import ActionProvider from "../../ActionProvider";
 import Styles from '../../styles/findAndAgent.module.css'
 import style from 'styled-components'
 let address=[
@@ -15,7 +14,7 @@ let address=[
     },
     {
         "pincode":160003,
-        "nearloc":"Aasan Premium Chandigarh, Near Bus Stand, Chandigarh",
+        "nearloc":"Aasan Premium Chandigarh, Near Elante Mall, Sector-28, Chandigarh",
         "dist":"Chandigarh-160003"
     },
     {
@@ -111,6 +110,26 @@ let address=[
 ];
 export default function FindAnAgentTwo() {
     const [add,changeadd]=useState([]);
+    // constructor( ()=> {
+    //     super();
+    //     this.state={
+    //         show:false
+    //     }
+    // })
+    const [open, chatOpen] = useState(false);
+
+    // const minichat = <View style={{flex:1, marginTop:100}}>
+    //                     <Text style={{fontSize:80 }}>Screen Text</Text>
+    //                     <Button title='show chat' onPress={()=>chatOpen(!open)}/>
+    //                     <Modal transparent={true} onPress={() => chatOpen(!open)}>
+    //                         <View style={{ backgroundColor:'green', flex:1 }}>
+    //                             <View style={{backgroundColor:'orange', margin:50, padding:40}}>
+    //                                 <Text style={{ fontSize:50}}>Modal Text</Text>
+    //                                 <Button title='Show Chat' onPress={() => chatOpen(!open)}/>
+    //                             </View>
+    //                         </View>
+    //                     </Modal>
+    //                 </View>
     function findAgent(){
         setTimeout(()=>{
              // console.log("button clicked")
@@ -135,7 +154,7 @@ export default function FindAnAgentTwo() {
                 <h3><strong>Find an Agent</strong></h3>
                 <br />
                 <input type="text" required placeholder="______" maxLength="6" className={Styles.inputs} id="pincode"></input>
-                <button className={Styles.buttons} onClick={findAgent}>Find an agent</button>
+                <button className={Styles.buttons} onClick={findAgent}>Enter Pincode</button>
             </div>
             <br />
             <br />
@@ -168,6 +187,7 @@ export default function FindAnAgentTwo() {
                             <i class="fa fa-comments-o fa-4x" aria-hidden="true" style={{ color: "#5b4cfa" }}></i>
                             <h6>Chat</h6>
                         </div>
+                            {/* {minichat} */}
                         <div>
                         {/* <Chatbot
                             config={config}
@@ -199,5 +219,6 @@ const Location=style.p`
 
 `
 const District=style.p`
-
 `
+
+
