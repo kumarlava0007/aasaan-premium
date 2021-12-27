@@ -1,28 +1,32 @@
 {
   "files": {
-    "main.css": "/aasaan-premium/static/css/main.146b1546.chunk.css",
-    "main.js": "/aasaan-premium/static/js/main.ad31d929.chunk.js",
-    "main.js.map": "/aasaan-premium/static/js/main.ad31d929.chunk.js.map",
-    "runtime-main.js": "/aasaan-premium/static/js/runtime-main.505ae9e3.js",
-    "runtime-main.js.map": "/aasaan-premium/static/js/runtime-main.505ae9e3.js.map",
-    "static/js/2.7c5c490c.chunk.js": "/aasaan-premium/static/js/2.7c5c490c.chunk.js",
-    "static/js/2.7c5c490c.chunk.js.map": "/aasaan-premium/static/js/2.7c5c490c.chunk.js.map",
-    "static/js/3.55162294.chunk.js": "/aasaan-premium/static/js/3.55162294.chunk.js",
-    "static/js/3.55162294.chunk.js.map": "/aasaan-premium/static/js/3.55162294.chunk.js.map",
+    "main.css": "/aasaan-premium/static/css/main.c9b3c2ff.chunk.css",
+    "main.js": "/aasaan-premium/static/js/main.4851f4f1.chunk.js",
+    "main.js.map": "/aasaan-premium/static/js/main.4851f4f1.chunk.js.map",
+    "runtime-main.js": "/aasaan-premium/static/js/runtime-main.0f4f474e.js",
+    "runtime-main.js.map": "/aasaan-premium/static/js/runtime-main.0f4f474e.js.map",
+    "static/css/2.23f89e4d.chunk.css": "/aasaan-premium/static/css/2.23f89e4d.chunk.css",
+    "static/js/2.434868d2.chunk.js": "/aasaan-premium/static/js/2.434868d2.chunk.js",
+    "static/js/2.434868d2.chunk.js.map": "/aasaan-premium/static/js/2.434868d2.chunk.js.map",
+    "static/js/3.0c7640d5.chunk.js": "/aasaan-premium/static/js/3.0c7640d5.chunk.js",
+    "static/js/3.0c7640d5.chunk.js.map": "/aasaan-premium/static/js/3.0c7640d5.chunk.js.map",
     "index.html": "/aasaan-premium/index.html",
-    "static/css/main.146b1546.chunk.css.map": "/aasaan-premium/static/css/main.146b1546.chunk.css.map",
-    "static/js/2.7c5c490c.chunk.js.LICENSE.txt": "/aasaan-premium/static/js/2.7c5c490c.chunk.js.LICENSE.txt",
+    "static/css/2.23f89e4d.chunk.css.map": "/aasaan-premium/static/css/2.23f89e4d.chunk.css.map",
+    "static/css/main.c9b3c2ff.chunk.css.map": "/aasaan-premium/static/css/main.c9b3c2ff.chunk.css.map",
+    "static/js/2.434868d2.chunk.js.LICENSE.txt": "/aasaan-premium/static/js/2.434868d2.chunk.js.LICENSE.txt",
     "static/media/AasaanPremiumLogo.de7dbef6.png": "/aasaan-premium/static/media/AasaanPremiumLogo.de7dbef6.png",
     "static/media/app_store_en.a033aaaf.svg": "/aasaan-premium/static/media/app_store_en.a033aaaf.svg",
     "static/media/claims_card.cfad917a.svg": "/aasaan-premium/static/media/claims_card.cfad917a.svg",
     "static/media/google_play_en.a6565474.svg": "/aasaan-premium/static/media/google_play_en.a6565474.svg",
+    "static/media/ham-logo.9f1777d9.png": "/aasaan-premium/static/media/ham-logo.9f1777d9.png",
     "static/media/ip.b21cbbd2.png": "/aasaan-premium/static/media/ip.b21cbbd2.png",
     "static/media/twoWom.f3dc5aad.png": "/aasaan-premium/static/media/twoWom.f3dc5aad.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.505ae9e3.js",
-    "static/js/2.7c5c490c.chunk.js",
-    "static/css/main.146b1546.chunk.css",
-    "static/js/main.ad31d929.chunk.js"
+    "static/js/runtime-main.0f4f474e.js",
+    "static/css/2.23f89e4d.chunk.css",
+    "static/js/2.434868d2.chunk.js",
+    "static/css/main.c9b3c2ff.chunk.css",
+    "static/js/main.4851f4f1.chunk.js"
   ]
 }
