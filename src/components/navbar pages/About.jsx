@@ -6,22 +6,31 @@ const About = () => {
     return (
         <div>
             <div className={classes.main}>
+
                 <div className={classes.first_section}>
                     <div className={classes.first_section_para}>
                         <h4><span style={{ fontSize: "40px", fontWeight: "bolder" }}>O</span>ur vision is to set the standard of excellence among insurance providers by being innovative, being financially strong, providing the right support and service for our customers, exceeding their expectations. We will attract and retain the very best employees and agents to help us achieve this goal.</h4>
                     </div>
+
                     <div className={classes.first_section_photo}>
                         <img src="https://sdkwc.org/wp-content/uploads/2021/07/VS_Our_Vision.png" />
                     </div>
+
                 </div><br /><br />
+
+
                 <div className={classes.first_section}>
                     <div className={classes.first_section_photo}>
                         <img src="http://visionsvcb.org/wp-content/uploads/2018/05/our-mission.png" style={{ height: "300px", width: "400px" }} />
                     </div>
+
                     <div className={classes.first_section_para}>
                         <h4><span style={{ fontSize: "40px", fontWeight: "bolder" }}>I</span>nterglobal Insurance Company, an independent insurance agency located in Medley, FL is committed to the principles of service, integrity and professionalism while providing our valued clients the highest quality of service with the goal of exceeding their expectations. Financial security and protection for our clients’ commitment as well as fairness and empowerment to our agents. Respect and opportunity for our employees, increasing value and reward for our shareholders.</h4>
                     </div>
+
                 </div><br /><br />
+
+                
                 <div className={classes.first_section}>
                     <div className={classes.first_section_para}>
                         <ul style={{ fontSize: "23px" }}>

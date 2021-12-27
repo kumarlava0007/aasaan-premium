@@ -18,3 +18,20 @@
     display:flex;
     align-items:center;
 }
+ 
+
+
+
+
+/* Resposive */
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    .first_section{
+       display: grid;
+       flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+     
+  }

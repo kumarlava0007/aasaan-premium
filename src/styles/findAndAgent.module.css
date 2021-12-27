@@ -47,10 +47,38 @@
     height: 200px;
     border-radius: 10px;
     background-color: white;
+    
+}
+.cards:hover{
+    width: 230px;
+    height: 230px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .mainContainerTwo {
     width: 100vw;
     height: 50vh;
     background-color: #F6F9FE;
+}
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 770px){
+.containerOne{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+}
+.mainContainerTwo{
+    margin-top: 20px;
+    width: 90vw;
+    height: 50vh;
+}
+.cardSection .cards{
+    width: 50vw;
+    height: 25vw;
+    margin: 10px;
+     
+}
 }
