@@ -20,9 +20,10 @@ const Insurance = () => {
         history.push('getAQuote');
     }
 
-    useEffect((e) => {
+    useEffect( async(e) => {
+        console.log("useEffect");
         const REGISTER_URL=Domain+"/allMyPolicies/"+ localStorage.getItem('mailId');
-        axios
+        await axios
       .get(REGISTER_URL)
       .then(response=>{
             console.log(response.data);
@@ -43,7 +44,7 @@ const Insurance = () => {
         )
     })
     setElement(insurance);
-    }, [localStorage.getItem('isLoggedIn')])
+    }, [])
 
     const handleShow = async(e) => {
         e.preventDefault();
@@ -110,7 +111,7 @@ const Insurance = () => {
                     
                     {element}
                 </table>
-                <button onClick={handleShow}>Refresh</button>
+                <button onClick={handleShow} className={classes.showPolicy}>Show my policies</button>
                 </>
 
                 }

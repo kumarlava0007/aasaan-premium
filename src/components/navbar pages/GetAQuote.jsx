@@ -30,13 +30,14 @@ const GetAQuote = () => {
     const [flagMonthly, setFlagMonthly] = useState(false);
 
     const [zipcode, setZipcode] = useState("");
-    const [inputs, setinputs] = useState({mailId: localStorage.getItem('mailId')})
-    
+    const [inputs, setinputs] = useState({});
     let count = 0;
 
     const handleBuyBtn = async(e) => {
         e.preventDefault();
         let REGISTER_URL = Domain + "/getAQuote";
+        setinputs(values => ({...values, mailId: localStorage.getItem('mailId')}))
+        console.log(inputs.mailId)
         await axios
             .post(REGISTER_URL, inputs)
             .then(response => {
